@@ -1,0 +1,71 @@
+# do eightbitadder_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying /home/glitchinthematrix/altera_lite/16.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:46:57 on Feb 02,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 16:46:57 on Feb 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:46:57 on Feb 02,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fullbitadder
+# -- Compiling architecture Behave of fullbitadder
+# -- Compiling entity eightbitadder
+# -- Compiling architecture Behave of eightbitadder
+# End time: 16:46:57 on Feb 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/eightbitadder/Testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:46:57 on Feb 02,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/eightbitadder/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 16:46:57 on Feb 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 16:46:57 on Feb 02,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.eightbitadder(behave)
+# Loading work.fullbitadder(behave)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 327680 ns  Iteration: 0  Instance: /testbench
+# 
+# stdin: <EOF>
+# End time: 16:47:22 on Feb 02,2018, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 0
