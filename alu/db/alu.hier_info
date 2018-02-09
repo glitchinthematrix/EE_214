@@ -1,0 +1,1224 @@
+|TopLevel
+TDI => Scan_Chain:scan_instance.TDI
+TDO << Scan_Chain:scan_instance.TDO
+TMS => Scan_Chain:scan_instance.TMS
+TCLK => Scan_Chain:scan_instance.TCLK
+TRST => Scan_Chain:scan_instance.TRST
+
+
+|TopLevel|Scan_Chain:scan_instance
+TDI => Scan_reg:In_Reg.SI
+TDO <= Scan_reg:Out_Reg.SO
+TMS => L2_en.DATAB
+TMS => next_state.DATAB
+TMS => next_state.DATAB
+TMS => Selector2.IN2
+TMS => next_state.DATAB
+TMS => Selector3.IN1
+TMS => Selector0.IN1
+TMS => Selector1.IN1
+TCLK => Scan_reg:In_Reg.clock
+TCLK => Scan_reg:Out_Reg.clock
+TCLK => current_state~1.DATAIN
+TRST => Scan_reg:In_Reg.reset
+TRST => Scan_reg:Out_Reg.reset
+TRST => current_state~3.DATAIN
+TRST => L1_en.OUTPUTSELECT
+TRST => L2_en.OUTPUTSELECT
+TRST => cap_shft.OUTPUTSELECT
+TRST => next_state.s_idle.OUTPUTSELECT
+TRST => next_state.s_DR.OUTPUTSELECT
+TRST => next_state.s_capture.OUTPUTSELECT
+TRST => next_state.s_shift.OUTPUTSELECT
+TRST => next_state.s_update.OUTPUTSELECT
+TRST => Scan_reg:In_Reg.sel_reg
+TRST => Scan_reg:Out_Reg.sel_reg
+dut_in[0] <= Scan_reg:In_Reg.PO[0]
+dut_in[1] <= Scan_reg:In_Reg.PO[1]
+dut_in[2] <= Scan_reg:In_Reg.PO[2]
+dut_in[3] <= Scan_reg:In_Reg.PO[3]
+dut_in[4] <= Scan_reg:In_Reg.PO[4]
+dut_in[5] <= Scan_reg:In_Reg.PO[5]
+dut_in[6] <= Scan_reg:In_Reg.PO[6]
+dut_in[7] <= Scan_reg:In_Reg.PO[7]
+dut_in[8] <= Scan_reg:In_Reg.PO[8]
+dut_in[9] <= Scan_reg:In_Reg.PO[9]
+dut_in[10] <= Scan_reg:In_Reg.PO[10]
+dut_in[11] <= Scan_reg:In_Reg.PO[11]
+dut_in[12] <= Scan_reg:In_Reg.PO[12]
+dut_in[13] <= Scan_reg:In_Reg.PO[13]
+dut_in[14] <= Scan_reg:In_Reg.PO[14]
+dut_in[15] <= Scan_reg:In_Reg.PO[15]
+dut_in[16] <= Scan_reg:In_Reg.PO[16]
+dut_in[17] <= Scan_reg:In_Reg.PO[17]
+dut_out[0] => Scan_reg:Out_Reg.PI[0]
+dut_out[1] => Scan_reg:Out_Reg.PI[1]
+dut_out[2] => Scan_reg:Out_Reg.PI[2]
+dut_out[3] => Scan_reg:Out_Reg.PI[3]
+dut_out[4] => Scan_reg:Out_Reg.PI[4]
+dut_out[5] => Scan_reg:Out_Reg.PI[5]
+dut_out[6] => Scan_reg:Out_Reg.PI[6]
+dut_out[7] => Scan_reg:Out_Reg.PI[7]
+
+
+|TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg
+clock => L2[0].CLK
+clock => L2[1].CLK
+clock => L2[2].CLK
+clock => L2[3].CLK
+clock => L2[4].CLK
+clock => L2[5].CLK
+clock => L2[6].CLK
+clock => L2[7].CLK
+clock => L2[8].CLK
+clock => L2[9].CLK
+clock => L2[10].CLK
+clock => L2[11].CLK
+clock => L2[12].CLK
+clock => L2[13].CLK
+clock => L2[14].CLK
+clock => L2[15].CLK
+clock => L2[16].CLK
+clock => L2[17].CLK
+clock => L1[0].CLK
+clock => L1[1].CLK
+clock => L1[2].CLK
+clock => L1[3].CLK
+clock => L1[4].CLK
+clock => L1[5].CLK
+clock => L1[6].CLK
+clock => L1[7].CLK
+clock => L1[8].CLK
+clock => L1[9].CLK
+clock => L1[10].CLK
+clock => L1[11].CLK
+clock => L1[12].CLK
+clock => L1[13].CLK
+clock => L1[14].CLK
+clock => L1[15].CLK
+clock => L1[16].CLK
+clock => L1[17].CLK
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+PI[0] => mux1[0].DATAB
+PI[0] => mux2.DATAB
+PI[1] => mux1[1].DATAB
+PI[1] => mux2.DATAB
+PI[2] => mux1[2].DATAB
+PI[2] => mux2.DATAB
+PI[3] => mux1[3].DATAB
+PI[3] => mux2.DATAB
+PI[4] => mux1[4].DATAB
+PI[4] => mux2.DATAB
+PI[5] => mux1[5].DATAB
+PI[5] => mux2.DATAB
+PI[6] => mux1[6].DATAB
+PI[6] => mux2.DATAB
+PI[7] => mux1[7].DATAB
+PI[7] => mux2.DATAB
+PI[8] => mux1[8].DATAB
+PI[8] => mux2.DATAB
+PI[9] => mux1[9].DATAB
+PI[9] => mux2.DATAB
+PI[10] => mux1[10].DATAB
+PI[10] => mux2.DATAB
+PI[11] => mux1[11].DATAB
+PI[11] => mux2.DATAB
+PI[12] => mux1[12].DATAB
+PI[12] => mux2.DATAB
+PI[13] => mux1[13].DATAB
+PI[13] => mux2.DATAB
+PI[14] => mux1[14].DATAB
+PI[14] => mux2.DATAB
+PI[15] => mux1[15].DATAB
+PI[15] => mux2.DATAB
+PI[16] => mux1[16].DATAB
+PI[16] => mux2.DATAB
+PI[17] => mux1[17].DATAB
+PI[17] => mux2.DATAB
+PO[0] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[1] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[2] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[3] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[4] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[5] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[6] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[7] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[8] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[9] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[10] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[11] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[12] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[13] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[14] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[15] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[16] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[17] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+SI => mux1[17].DATAA
+SO <= L1[0].DB_MAX_OUTPUT_PORT_TYPE
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+cap_shft => mux1[17].OUTPUTSELECT
+cap_shft => mux1[16].OUTPUTSELECT
+cap_shft => mux1[15].OUTPUTSELECT
+cap_shft => mux1[14].OUTPUTSELECT
+cap_shft => mux1[13].OUTPUTSELECT
+cap_shft => mux1[12].OUTPUTSELECT
+cap_shft => mux1[11].OUTPUTSELECT
+cap_shft => mux1[10].OUTPUTSELECT
+cap_shft => mux1[9].OUTPUTSELECT
+cap_shft => mux1[8].OUTPUTSELECT
+cap_shft => mux1[7].OUTPUTSELECT
+cap_shft => mux1[6].OUTPUTSELECT
+cap_shft => mux1[5].OUTPUTSELECT
+cap_shft => mux1[4].OUTPUTSELECT
+cap_shft => mux1[3].OUTPUTSELECT
+cap_shft => mux1[2].OUTPUTSELECT
+cap_shft => mux1[1].OUTPUTSELECT
+cap_shft => mux1[0].OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+
+
+|TopLevel|Scan_Chain:scan_instance|Scan_Reg:Out_Reg
+clock => L2[0].CLK
+clock => L2[1].CLK
+clock => L2[2].CLK
+clock => L2[3].CLK
+clock => L2[4].CLK
+clock => L2[5].CLK
+clock => L2[6].CLK
+clock => L2[7].CLK
+clock => L1[0].CLK
+clock => L1[1].CLK
+clock => L1[2].CLK
+clock => L1[3].CLK
+clock => L1[4].CLK
+clock => L1[5].CLK
+clock => L1[6].CLK
+clock => L1[7].CLK
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+PI[0] => mux1[0].DATAB
+PI[0] => mux2.DATAB
+PI[1] => mux1[1].DATAB
+PI[1] => mux2.DATAB
+PI[2] => mux1[2].DATAB
+PI[2] => mux2.DATAB
+PI[3] => mux1[3].DATAB
+PI[3] => mux2.DATAB
+PI[4] => mux1[4].DATAB
+PI[4] => mux2.DATAB
+PI[5] => mux1[5].DATAB
+PI[5] => mux2.DATAB
+PI[6] => mux1[6].DATAB
+PI[6] => mux2.DATAB
+PI[7] => mux1[7].DATAB
+PI[7] => mux2.DATAB
+PO[0] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[1] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[2] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[3] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[4] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[5] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[6] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[7] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+SI => mux1[7].DATAA
+SO <= L1[0].DB_MAX_OUTPUT_PORT_TYPE
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+cap_shft => mux1[7].OUTPUTSELECT
+cap_shft => mux1[6].OUTPUTSELECT
+cap_shft => mux1[5].OUTPUTSELECT
+cap_shft => mux1[4].OUTPUTSELECT
+cap_shft => mux1[3].OUTPUTSELECT
+cap_shft => mux1[2].OUTPUTSELECT
+cap_shft => mux1[1].OUTPUTSELECT
+cap_shft => mux1[0].OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+
+
+|TopLevel|alu:dut
+X[0] => eightbitadder:a.x[0]
+X[0] => eightbitleftshifter:b.ain[0]
+X[0] => eightbitrightshifter:c.ain[0]
+X[0] => eightbitsubtractor:d.x[0]
+X[1] => eightbitadder:a.x[1]
+X[1] => eightbitleftshifter:b.ain[1]
+X[1] => eightbitrightshifter:c.ain[1]
+X[1] => eightbitsubtractor:d.x[1]
+X[2] => eightbitadder:a.x[2]
+X[2] => eightbitleftshifter:b.ain[2]
+X[2] => eightbitrightshifter:c.ain[2]
+X[2] => eightbitsubtractor:d.x[2]
+X[3] => eightbitadder:a.x[3]
+X[3] => eightbitleftshifter:b.ain[3]
+X[3] => eightbitrightshifter:c.ain[3]
+X[3] => eightbitsubtractor:d.x[3]
+X[4] => eightbitadder:a.x[4]
+X[4] => eightbitleftshifter:b.ain[4]
+X[4] => eightbitrightshifter:c.ain[4]
+X[4] => eightbitsubtractor:d.x[4]
+X[5] => eightbitadder:a.x[5]
+X[5] => eightbitleftshifter:b.ain[5]
+X[5] => eightbitrightshifter:c.ain[5]
+X[5] => eightbitsubtractor:d.x[5]
+X[6] => eightbitadder:a.x[6]
+X[6] => eightbitleftshifter:b.ain[6]
+X[6] => eightbitrightshifter:c.ain[6]
+X[6] => eightbitsubtractor:d.x[6]
+X[7] => eightbitadder:a.x[7]
+X[7] => eightbitleftshifter:b.ain[7]
+X[7] => eightbitrightshifter:c.ain[7]
+X[7] => eightbitsubtractor:d.x[7]
+Y[0] => eightbitadder:a.y[0]
+Y[0] => eightbitleftshifter:b.bin[0]
+Y[0] => eightbitrightshifter:c.bin[0]
+Y[0] => eightbitsubtractor:d.y[0]
+Y[1] => eightbitadder:a.y[1]
+Y[1] => eightbitleftshifter:b.bin[1]
+Y[1] => eightbitrightshifter:c.bin[1]
+Y[1] => eightbitsubtractor:d.y[1]
+Y[2] => eightbitadder:a.y[2]
+Y[2] => eightbitleftshifter:b.bin[2]
+Y[2] => eightbitrightshifter:c.bin[2]
+Y[2] => eightbitsubtractor:d.y[2]
+Y[3] => eightbitadder:a.y[3]
+Y[3] => eightbitleftshifter:b.bin[3]
+Y[3] => eightbitrightshifter:c.bin[3]
+Y[3] => eightbitsubtractor:d.y[3]
+Y[4] => eightbitadder:a.y[4]
+Y[4] => eightbitleftshifter:b.bin[4]
+Y[4] => eightbitrightshifter:c.bin[4]
+Y[4] => eightbitsubtractor:d.y[4]
+Y[5] => eightbitadder:a.y[5]
+Y[5] => eightbitleftshifter:b.bin[5]
+Y[5] => eightbitrightshifter:c.bin[5]
+Y[5] => eightbitsubtractor:d.y[5]
+Y[6] => eightbitadder:a.y[6]
+Y[6] => eightbitleftshifter:b.bin[6]
+Y[6] => eightbitrightshifter:c.bin[6]
+Y[6] => eightbitsubtractor:d.y[6]
+Y[7] => eightbitadder:a.y[7]
+Y[7] => eightbitleftshifter:b.bin[7]
+Y[7] => eightbitrightshifter:c.bin[7]
+Y[7] => eightbitsubtractor:d.y[7]
+x0 => process_0.IN0
+x0 => process_0.IN0
+x0 => process_0.IN0
+x1 => process_0.IN1
+x1 => process_0.IN1
+x1 => process_0.IN1
+Z[0] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[4] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[5] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[6] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+Z[7] <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+x[4] => fullbitadder:x_5.a
+x[5] => fullbitadder:x_6.a
+x[6] => fullbitadder:x_7.a
+x[7] => fullbitadder:x_8.a
+y[0] => fullbitadder:x_1.b
+y[1] => fullbitadder:x_2.b
+y[2] => fullbitadder:x_3.b
+y[3] => fullbitadder:x_4.b
+y[4] => fullbitadder:x_5.b
+y[5] => fullbitadder:x_6.b
+y[6] => fullbitadder:x_7.b
+y[7] => fullbitadder:x_8.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+z[4] <= fullbitadder:x_5.sum
+z[5] <= fullbitadder:x_6.sum
+z[6] <= fullbitadder:x_7.sum
+z[7] <= fullbitadder:x_8.sum
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_1
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_2
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_3
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_4
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_5
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_6
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_7
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitadder:a|fullbitadder:x_8
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b
+ain[0] => decisionmux1:x_1.a[0]
+ain[1] => decisionmux1:x_1.a[1]
+ain[2] => decisionmux1:x_1.a[2]
+ain[3] => decisionmux1:x_1.a[3]
+ain[4] => decisionmux1:x_1.a[4]
+ain[5] => decisionmux1:x_1.a[5]
+ain[6] => decisionmux1:x_1.a[6]
+ain[7] => decisionmux1:x_1.a[7]
+bin[0] => decisionmux1:x_1.b
+bin[1] => decisionmux2:x_2.b
+bin[2] => decisionmux3:x_3.b
+bin[3] => decisionmux4:x_4.b
+bin[4] => decisionmux4:x_5.b
+bin[5] => decisionmux4:x_6.b
+bin[6] => decisionmux4:x_7.b
+bin[7] => decisionmux4:x_8.b
+z[0] <= decisionmux4:x_8.shift[0]
+z[1] <= decisionmux4:x_8.shift[1]
+z[2] <= decisionmux4:x_8.shift[2]
+z[3] <= decisionmux4:x_8.shift[3]
+z[4] <= decisionmux4:x_8.shift[4]
+z[5] <= decisionmux4:x_8.shift[5]
+z[6] <= decisionmux4:x_8.shift[6]
+z[7] <= decisionmux4:x_8.shift[7]
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux1:x_1
+a[0] => shift.IN0
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux2:x_2
+a[0] => shift.IN0
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux3:x_3
+a[0] => shift.IN0
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux4:x_4
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux4:x_5
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux4:x_6
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux4:x_7
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitleftshifter:b|decisionmux4:x_8
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c
+ain[0] => decisionmuxs1:x_1.a[0]
+ain[1] => decisionmuxs1:x_1.a[1]
+ain[2] => decisionmuxs1:x_1.a[2]
+ain[3] => decisionmuxs1:x_1.a[3]
+ain[4] => decisionmuxs1:x_1.a[4]
+ain[5] => decisionmuxs1:x_1.a[5]
+ain[6] => decisionmuxs1:x_1.a[6]
+ain[7] => decisionmuxs1:x_1.a[7]
+bin[0] => decisionmuxs1:x_1.b
+bin[1] => decisionmuxs2:x_2.b
+bin[2] => decisionmuxs3:x_3.b
+bin[3] => decisionmuxs4:x_4.b
+bin[4] => decisionmuxs4:x_5.b
+bin[5] => decisionmuxs4:x_6.b
+bin[6] => decisionmuxs4:x_7.b
+bin[7] => decisionmuxs4:x_8.b
+z[0] <= decisionmuxs4:x_8.shift[0]
+z[1] <= decisionmuxs4:x_8.shift[1]
+z[2] <= decisionmuxs4:x_8.shift[2]
+z[3] <= decisionmuxs4:x_8.shift[3]
+z[4] <= decisionmuxs4:x_8.shift[4]
+z[5] <= decisionmuxs4:x_8.shift[5]
+z[6] <= decisionmuxs4:x_8.shift[6]
+z[7] <= decisionmuxs4:x_8.shift[7]
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs1:x_1
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs2:x_2
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs3:x_3
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs4:x_4
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs4:x_5
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs4:x_6
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs4:x_7
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitrightshifter:c|decisionmuxs4:x_8
+a[0] => shift.IN0
+a[1] => shift.IN0
+a[2] => shift.IN0
+a[3] => shift.IN0
+a[4] => shift.IN0
+a[5] => shift.IN0
+a[6] => shift.IN0
+a[7] => shift.IN0
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+b => shift.IN1
+shift[0] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[1] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[2] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[3] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[4] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[5] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[6] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+shift[7] <= shift.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d
+x[0] => fullbitsubtractor:x_1.a
+x[1] => fullbitsubtractor:x_2.a
+x[2] => fullbitsubtractor:x_3.a
+x[3] => fullbitsubtractor:x_4.a
+x[4] => fullbitsubtractor:x_5.a
+x[5] => fullbitsubtractor:x_6.a
+x[6] => fullbitsubtractor:x_7.a
+x[7] => fullbitsubtractor:x_8.a
+y[0] => fullbitsubtractor:x_1.b
+y[1] => fullbitsubtractor:x_2.b
+y[2] => fullbitsubtractor:x_3.b
+y[3] => fullbitsubtractor:x_4.b
+y[4] => fullbitsubtractor:x_5.b
+y[5] => fullbitsubtractor:x_6.b
+y[6] => fullbitsubtractor:x_7.b
+y[7] => fullbitsubtractor:x_8.b
+z[0] <= fullbitsubtractor:x_1.sum
+z[1] <= fullbitsubtractor:x_2.sum
+z[2] <= fullbitsubtractor:x_3.sum
+z[3] <= fullbitsubtractor:x_4.sum
+z[4] <= fullbitsubtractor:x_5.sum
+z[5] <= fullbitsubtractor:x_6.sum
+z[6] <= fullbitsubtractor:x_7.sum
+z[7] <= fullbitsubtractor:x_8.sum
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_1
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_2
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_3
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_4
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_5
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_6
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_7
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|alu:dut|eightbitsubtractor:d|fullbitsubtractor:x_8
+a => sum.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+cin => sum.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

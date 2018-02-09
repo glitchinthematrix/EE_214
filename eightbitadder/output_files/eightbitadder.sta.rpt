@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for eightbitadder
-Fri Feb  2 16:46:40 2018
+Fri Feb  9 15:21:34 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -233,7 +233,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Feb  2 16:46:39 2018
+    Info: Processing started: Fri Feb  9 15:21:34 2018
 Info: Command: quartus_sta eightbitadder -c eightbitadder
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -259,8 +259,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 1005 megabytes
-    Info: Processing ended: Fri Feb  2 16:46:40 2018
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Feb  9 15:21:34 2018
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

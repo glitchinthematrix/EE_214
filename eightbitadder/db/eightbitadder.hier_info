@@ -1,58 +1,58 @@
 |dut
-input_vector[0] => eightbitadder:a.y[0]
-input_vector[1] => eightbitadder:a.y[1]
-input_vector[2] => eightbitadder:a.y[2]
-input_vector[3] => eightbitadder:a.y[3]
-input_vector[4] => eightbitadder:a.y[4]
-input_vector[5] => eightbitadder:a.y[5]
-input_vector[6] => eightbitadder:a.y[6]
-input_vector[7] => eightbitadder:a.y[7]
-input_vector[8] => eightbitadder:a.x[0]
-input_vector[9] => eightbitadder:a.x[1]
-input_vector[10] => eightbitadder:a.x[2]
-input_vector[11] => eightbitadder:a.x[3]
-input_vector[12] => eightbitadder:a.x[4]
-input_vector[13] => eightbitadder:a.x[5]
-input_vector[14] => eightbitadder:a.x[6]
-input_vector[15] => eightbitadder:a.x[7]
-output_vector[0] << eightbitadder:a.z[0]
-output_vector[1] << eightbitadder:a.z[1]
-output_vector[2] << eightbitadder:a.z[2]
-output_vector[3] << eightbitadder:a.z[3]
-output_vector[4] << eightbitadder:a.z[4]
-output_vector[5] << eightbitadder:a.z[5]
-output_vector[6] << eightbitadder:a.z[6]
-output_vector[7] << eightbitadder:a.z[7]
+input_vector[0] => eightbitsubtractor:a.y[0]
+input_vector[1] => eightbitsubtractor:a.y[1]
+input_vector[2] => eightbitsubtractor:a.y[2]
+input_vector[3] => eightbitsubtractor:a.y[3]
+input_vector[4] => eightbitsubtractor:a.y[4]
+input_vector[5] => eightbitsubtractor:a.y[5]
+input_vector[6] => eightbitsubtractor:a.y[6]
+input_vector[7] => eightbitsubtractor:a.y[7]
+input_vector[8] => eightbitsubtractor:a.x[0]
+input_vector[9] => eightbitsubtractor:a.x[1]
+input_vector[10] => eightbitsubtractor:a.x[2]
+input_vector[11] => eightbitsubtractor:a.x[3]
+input_vector[12] => eightbitsubtractor:a.x[4]
+input_vector[13] => eightbitsubtractor:a.x[5]
+input_vector[14] => eightbitsubtractor:a.x[6]
+input_vector[15] => eightbitsubtractor:a.x[7]
+output_vector[0] << eightbitsubtractor:a.z[0]
+output_vector[1] << eightbitsubtractor:a.z[1]
+output_vector[2] << eightbitsubtractor:a.z[2]
+output_vector[3] << eightbitsubtractor:a.z[3]
+output_vector[4] << eightbitsubtractor:a.z[4]
+output_vector[5] << eightbitsubtractor:a.z[5]
+output_vector[6] << eightbitsubtractor:a.z[6]
+output_vector[7] << eightbitsubtractor:a.z[7]
 
 
-|dut|eightbitadder:a
-x[0] => fullbitadder:x_1.a
-x[1] => fullbitadder:x_2.a
-x[2] => fullbitadder:x_3.a
-x[3] => fullbitadder:x_4.a
-x[4] => fullbitadder:x_5.a
-x[5] => fullbitadder:x_6.a
-x[6] => fullbitadder:x_7.a
-x[7] => fullbitadder:x_8.a
-y[0] => fullbitadder:x_1.b
-y[1] => fullbitadder:x_2.b
-y[2] => fullbitadder:x_3.b
-y[3] => fullbitadder:x_4.b
-y[4] => fullbitadder:x_5.b
-y[5] => fullbitadder:x_6.b
-y[6] => fullbitadder:x_7.b
-y[7] => fullbitadder:x_8.b
-z[0] <= fullbitadder:x_1.sum
-z[1] <= fullbitadder:x_2.sum
-z[2] <= fullbitadder:x_3.sum
-z[3] <= fullbitadder:x_4.sum
-z[4] <= fullbitadder:x_5.sum
-z[5] <= fullbitadder:x_6.sum
-z[6] <= fullbitadder:x_7.sum
-z[7] <= fullbitadder:x_8.sum
+|dut|eightbitsubtractor:a
+x[0] => fullbitsubtractor:x_1.a
+x[1] => fullbitsubtractor:x_2.a
+x[2] => fullbitsubtractor:x_3.a
+x[3] => fullbitsubtractor:x_4.a
+x[4] => fullbitsubtractor:x_5.a
+x[5] => fullbitsubtractor:x_6.a
+x[6] => fullbitsubtractor:x_7.a
+x[7] => fullbitsubtractor:x_8.a
+y[0] => fullbitsubtractor:x_1.b
+y[1] => fullbitsubtractor:x_2.b
+y[2] => fullbitsubtractor:x_3.b
+y[3] => fullbitsubtractor:x_4.b
+y[4] => fullbitsubtractor:x_5.b
+y[5] => fullbitsubtractor:x_6.b
+y[6] => fullbitsubtractor:x_7.b
+y[7] => fullbitsubtractor:x_8.b
+z[0] <= fullbitsubtractor:x_1.sum
+z[1] <= fullbitsubtractor:x_2.sum
+z[2] <= fullbitsubtractor:x_3.sum
+z[3] <= fullbitsubtractor:x_4.sum
+z[4] <= fullbitsubtractor:x_5.sum
+z[5] <= fullbitsubtractor:x_6.sum
+z[6] <= fullbitsubtractor:x_7.sum
+z[7] <= fullbitsubtractor:x_8.sum
 
 
-|dut|eightbitadder:a|fullbitadder:x_1
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_1
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -63,7 +63,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|dut|eightbitadder:a|fullbitadder:x_2
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_2
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -74,7 +74,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|dut|eightbitadder:a|fullbitadder:x_3
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_3
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -85,7 +85,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|dut|eightbitadder:a|fullbitadder:x_4
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_4
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -96,7 +96,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|dut|eightbitadder:a|fullbitadder:x_5
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_5
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -107,7 +107,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|dut|eightbitadder:a|fullbitadder:x_6
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_6
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -118,7 +118,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|dut|eightbitadder:a|fullbitadder:x_7
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_7
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1
@@ -129,7 +129,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|dut|eightbitadder:a|fullbitadder:x_8
+|dut|eightbitsubtractor:a|fullbitsubtractor:x_8
 a => sum.IN0
 a => cout.IN0
 b => sum.IN1

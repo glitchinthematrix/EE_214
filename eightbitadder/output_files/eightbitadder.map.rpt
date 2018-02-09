@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eightbitadder
-Fri Feb  2 16:46:36 2018
+Fri Feb  9 15:21:31 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -14,8 +14,8 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "eightbitadder:a|fullbitadder:x_8"
- 10. Port Connectivity Checks: "eightbitadder:a|fullbitadder:x_1"
+  9. Port Connectivity Checks: "eightbitsubtractor:a|fullbitsubtractor:x_8"
+ 10. Port Connectivity Checks: "eightbitsubtractor:a|fullbitsubtractor:x_1"
  11. Analysis & Synthesis Messages
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Feb  2 16:46:36 2018       ;
+; Analysis & Synthesis Status ; Successful - Fri Feb  9 15:21:31 2018       ;
 ; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name               ; eightbitadder                               ;
 ; Top-level Entity Name       ; DUT                                         ;
@@ -138,14 +138,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                          ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; DUT.vhd                          ; yes             ; User VHDL File  ; /home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd           ;         ;
-; eightbitadder.vhd                ; yes             ; User VHDL File  ; /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; eightbitsubtractor.vhd           ; yes             ; User VHDL File  ; /home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd ;         ;
+; DUT.vhd                          ; yes             ; User VHDL File  ; /home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd                ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -182,22 +182,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                   ; Entity Name   ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+---------------+--------------+
-; |DUT                       ; 14 (0)      ; 0            ; 0          ; 24   ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                  ; DUT           ; work         ;
-;    |eightbitadder:a|       ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a                  ; eightbitadder ; work         ;
-;       |fullbitadder:x_1|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_1 ; fullbitadder  ; work         ;
-;       |fullbitadder:x_2|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_2 ; fullbitadder  ; work         ;
-;       |fullbitadder:x_3|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_3 ; fullbitadder  ; work         ;
-;       |fullbitadder:x_4|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_4 ; fullbitadder  ; work         ;
-;       |fullbitadder:x_5|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_5 ; fullbitadder  ; work         ;
-;       |fullbitadder:x_6|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_6 ; fullbitadder  ; work         ;
-;       |fullbitadder:x_7|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_7 ; fullbitadder  ; work         ;
-;       |fullbitadder:x_8|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitadder:a|fullbitadder:x_8 ; fullbitadder  ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+---------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                             ; Entity Name        ; Library Name ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------+--------------------+--------------+
+; |DUT                          ; 14 (0)      ; 0            ; 0          ; 24   ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                            ; DUT                ; work         ;
+;    |eightbitsubtractor:a|     ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a                       ; eightbitsubtractor ; work         ;
+;       |fullbitsubtractor:x_1| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_1 ; fullbitsubtractor  ; work         ;
+;       |fullbitsubtractor:x_2| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_2 ; fullbitsubtractor  ; work         ;
+;       |fullbitsubtractor:x_3| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_3 ; fullbitsubtractor  ; work         ;
+;       |fullbitsubtractor:x_4| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_4 ; fullbitsubtractor  ; work         ;
+;       |fullbitsubtractor:x_5| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_5 ; fullbitsubtractor  ; work         ;
+;       |fullbitsubtractor:x_6| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_6 ; fullbitsubtractor  ; work         ;
+;       |fullbitsubtractor:x_7| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_7 ; fullbitsubtractor  ; work         ;
+;       |fullbitsubtractor:x_8| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|eightbitsubtractor:a|fullbitsubtractor:x_8 ; fullbitsubtractor  ; work         ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -217,7 +217,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "eightbitadder:a|fullbitadder:x_8"                                                   ;
+; Port Connectivity Checks: "eightbitsubtractor:a|fullbitsubtractor:x_8"                                         ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -225,13 +225,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------+
-; Port Connectivity Checks: "eightbitadder:a|fullbitadder:x_1" ;
-+------+-------+----------+------------------------------------+
-; Port ; Type  ; Severity ; Details                            ;
-+------+-------+----------+------------------------------------+
-; cin  ; Input ; Info     ; Stuck at GND                       ;
-+------+-------+----------+------------------------------------+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "eightbitsubtractor:a|fullbitsubtractor:x_1" ;
++------+-------+----------+----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                      ;
++------+-------+----------+----------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                 ;
++------+-------+----------+----------------------------------------------+
 
 
 +-------------------------------+
@@ -240,9 +240,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Fri Feb  2 16:46:23 2018
+    Info: Processing started: Fri Feb  9 15:21:17 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eightbitadder -c eightbitadder
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 10 design units, including 5 entities, in source file eightbitrightshifter.vhd
+    Info (12022): Found design unit 1: decisionmuxs1-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 11
+    Info (12022): Found design unit 2: decisionmuxs2-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 30
+    Info (12022): Found design unit 3: decisionmuxs3-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 49
+    Info (12022): Found design unit 4: decisionmuxs4-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 67
+    Info (12022): Found design unit 5: eightbitrightshifter-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 85
+    Info (12023): Found entity 1: decisionmuxs1 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 7
+    Info (12023): Found entity 2: decisionmuxs2 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 26
+    Info (12023): Found entity 3: decisionmuxs3 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 45
+    Info (12023): Found entity 4: decisionmuxs4 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 63
+    Info (12023): Found entity 5: eightbitrightshifter File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd Line: 82
+Info (12021): Found 10 design units, including 5 entities, in source file eightbitleftshifter.vhd
+    Info (12022): Found design unit 1: decisionmux1-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 11
+    Info (12022): Found design unit 2: decisionmux2-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 30
+    Info (12022): Found design unit 3: decisionmux3-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 49
+    Info (12022): Found design unit 4: decisionmux4-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 67
+    Info (12022): Found design unit 5: eightbitleftshifter-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 85
+    Info (12023): Found entity 1: decisionmux1 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 7
+    Info (12023): Found entity 2: decisionmux2 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 26
+    Info (12023): Found entity 3: decisionmux3 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 45
+    Info (12023): Found entity 4: decisionmux4 File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 63
+    Info (12023): Found entity 5: eightbitleftshifter File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd Line: 82
 Info (12021): Found 4 design units, including 2 entities, in source file eightbitsubtractor.vhd
     Info (12022): Found design unit 1: fullbitsubtractor-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd Line: 10
     Info (12022): Found design unit 2: eightbitsubtractor-Behave File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd Line: 24
@@ -257,16 +279,16 @@ Info (12021): Found 4 design units, including 2 entities, in source file eightbi
     Info (12023): Found entity 1: fullbitadder File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd Line: 6
     Info (12023): Found entity 2: eightbitadder File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd Line: 20
 Info (12127): Elaborating entity "dut" for the top level hierarchy
-Info (12128): Elaborating entity "eightbitadder" for hierarchy "eightbitadder:a" File: /home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd Line: 30
-Info (12128): Elaborating entity "fullbitadder" for hierarchy "eightbitadder:a|fullbitadder:x_1" File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd Line: 32
+Info (12128): Elaborating entity "eightbitsubtractor" for hierarchy "eightbitsubtractor:a" File: /home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd Line: 31
+Info (12128): Elaborating entity "fullbitsubtractor" for hierarchy "eightbitsubtractor:a|fullbitsubtractor:x_1" File: /home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd Line: 32
 Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 14 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1220 megabytes
-    Info: Processing ended: Fri Feb  2 16:46:36 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Peak virtual memory: 1227 megabytes
+    Info: Processing ended: Fri Feb  9 15:21:31 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:33
 
 

@@ -10,7 +10,7 @@ end entity fullbitadder;
 architecture Behave of fullbitadder is
 begin
   sum <= ((a xor b) xor(cin));
-  cout <= ((not(a) and b) or (not(a xor b) and cin));
+  cout <= ((a and b) or ((a xor b) and cin));
   
 end Behave;
 

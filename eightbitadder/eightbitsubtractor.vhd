@@ -10,7 +10,7 @@ end entity fullbitsubtractor;
 architecture Behave of fullbitsubtractor is
 begin
   sum <= ((a xor b) xor(cin));
-  cout <= ((a and b) or(b and cin) or (cin and a));
+  cout <= ((not(a) and b) or (not(a xor b) and cin));
   
 end Behave;
 

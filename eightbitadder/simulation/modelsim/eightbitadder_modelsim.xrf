@@ -1,4 +1,6 @@
 vendor_name = ModelSim
+source_file = 1, /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd
+source_file = 1, /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd
 source_file = 1, /home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd
 source_file = 1, /home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd
 source_file = 1, /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd

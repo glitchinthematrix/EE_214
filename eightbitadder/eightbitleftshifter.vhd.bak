@@ -1,0 +1,92 @@
+library std;
+use std.standard.all;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity decisionmux1 is
+port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic( 7 downto 0));
+end entity decisionmux1;
+architecture Behave of decisionmux1 is
+begin 
+	shift(7) <= ((a(6) and b) or ( not(b) and a(7)))
+	shift(6) <= ((a(5) and b) or ( not(b) and a(6)))
+	shift(5) <= ((a(4) and b) or ( not(b) and a(5)))
+	shift(4) <= ((a(3) and b) or ( not(b) and a(4)))
+	shift(3) <= ((a(2) and b) or ( not(b) and a(3)))
+	shift(2) <= ((a(1) and b) or ( not(b) and a(2)))
+	shift(1) <= ((a(0) and b) or ( not(b) and a(1)))
+	shift(0) <= (('0' and b) or ( not(b) and a(0)))
+end Behave
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity decisionmux2 is
+port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic( 7 downto 0));
+end entity decisionmux2;
+architecture Behave of decisionmux2 is
+begin 
+	shift(7) <= ((a(5) and b) or ( not(b) and a(7)))
+	shift(6) <= ((a(4) and b) or ( not(b) and a(6)))
+	shift(5) <= ((a(3) and b) or ( not(b) and a(5)))
+	shift(4) <= ((a(2) and b) or ( not(b) and a(4)))
+	shift(3) <= ((a(1) and b) or ( not(b) and a(3)))
+	shift(2) <= ((a(0) and b) or ( not(b) and a(2)))
+	shift(1) <= (('0' and b) or ( not(b) and a(1)))
+	shift(0) <= (('0' and b) or ( not(b) and a(0)))
+end Behave	
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity decisionmux3 is
+port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic( 7 downto 0));
+end entity decisionmux3;
+architecture Behave of decisionmux3 is
+begin 
+	shift(7) <= ((a(3) and b) or ( not(b) and a(7)))
+	shift(6) <= ((a(2) and b) or ( not(b) and a(6)))
+	shift(5) <= ((a(1) and b) or ( not(b) and a(5)))
+	shift(4) <= ((a(0) and b) or ( not(b) and a(4)))
+	shift(3) <= (('0' and b) or ( not(b) and a(3)))
+	shift(2) <= (('0' and b) or ( not(b) and a(2)))
+	shift(1) <= (('0' and b) or ( not(b) and a(1)))
+	shift(0) <= (('0' and b) or ( not(b) and a(0)))
+end Behave	
+
+  
+  
+  
+entity eightbitleftshifter is
+	port(ain:in std_logic_vector(7 downto 0); bin:in std_logic_vector(3 downto 0); z:out std_logic_vector(7 downto 0));
+end entity eightbitleftshifter
+architecture Behave of eightbitleftshifter is
+component decisionmux1 is
+	port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic( 7 downto 0));
+	end component decisionmux1;
+component decisionmux2 is
+	port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic( 7 downto 0));
+end component decisionmux2;
+component decisionmux3 is
+	port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic( 7 downto 0));
+end component decisionmux3;
+signal firstoutput: std_logic_vector( 7 downto 0);
+signal secondoutput: std_logic_vector(7 downto 0);
+begin
+if bin(3)='1' then
+	z <= '00000000'
+	
+else
+	x_1 : decisionmux1 port map ( a=> ain, b=>b(0), shift=>firstoutput);
+	x_2 : decisionmux2 port map ( a=> firstoutput, b=>b(1), shift=>secondoutput);
+	x_3 : decisionmux3 port map ( a=> secondoutput, b=>b(2), shift=>z);
+end architecture Behave
+
+

@@ -1,0 +1,116 @@
+library std;
+use std.standard.all;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity decisionmux1 is
+port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+end entity decisionmux1;
+architecture Behave of decisionmux1 is
+begin 
+	shift(7) <= (('0' and b) or ( not(b) and a(7)));
+	shift(6) <= ((a(7) and b) or ( not(b) and a(6)));
+	shift(5) <= ((a(6) and b) or ( not(b) and a(5)));
+	shift(4) <= ((a(5) and b) or ( not(b) and a(4)));
+	shift(3) <= ((a(4) and b) or ( not(b) and a(3)));
+	shift(2) <= ((a(3) and b) or ( not(b) and a(2)));
+	shift(1) <= ((a(2) and b) or ( not(b) and a(1)));
+	shift(0) <= ((a(1) and b) or ( not(b) and a(0)));
+end Behave;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity decisionmux2 is
+port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+end entity decisionmux2;
+architecture Behave of decisionmux2 is
+begin 
+	shift(7) <= (('0' and b) or ( not(b) and a(7)));
+	shift(6) <= (('0' and b) or ( not(b) and a(6)));
+	shift(5) <= ((a(7) and b) or ( not(b) and a(5)));
+	shift(4) <= ((a(6) and b) or ( not(b) and a(4)));
+	shift(3) <= ((a(5) and b) or ( not(b) and a(3)));
+	shift(2) <= ((a(4) and b) or ( not(b) and a(2)));
+	shift(1) <= ((a(3) and b) or ( not(b) and a(1)));
+	shift(0) <= ((a(2) and b) or ( not(b) and a(0)));
+end Behave;	
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity decisionmux3 is
+port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+end entity decisionmux3;
+architecture Behave of decisionmux3 is
+begin 
+	shift(7) <= (('0' and b) or ( not(b) and a(7)));
+	shift(6) <= (('0' and b) or ( not(b) and a(6)));
+	shift(5) <= (('0' and b) or ( not(b) and a(5)));
+	shift(4) <= (('0' and b) or ( not(b) and a(4)));
+	shift(3) <= ((a(7) and b) or ( not(b) and a(3)));
+	shift(2) <= ((a(6) and b) or ( not(b) and a(2)));
+	shift(1) <= ((a(5) and b) or ( not(b) and a(1)));
+	shift(0) <= ((a(4) and b) or ( not(b) and a(0)));
+end Behave	;
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity decisionmux4 is
+port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+end entity decisionmux4;
+architecture Behave of decisionmux4 is
+begin 
+	shift(7) <= (('0' and b) or ( not(b) and a(7)));
+	shift(6) <= (('0' and b) or ( not(b) and a(6)));
+	shift(5) <= (('0' and b) or ( not(b) and a(5)));
+	shift(4) <= (('0' and b) or ( not(b) and a(4)));
+	shift(3) <= (('0' and b) or ( not(b) and a(3)));
+	shift(2) <= (('0' and b) or ( not(b) and a(2)));
+	shift(1) <= (('0' and b) or ( not(b) and a(1)));
+	shift(0) <= (('0' and b) or ( not(b) and a(0)));
+end Behave	;
+  
+library ieee;
+use ieee.std_logic_1164.all;  
+  
+entity eightbitleftshifter is
+	port(ain:in std_logic_vector(7 downto 0); bin:in std_logic_vector(7 downto 0); z:out std_logic_vector(7 downto 0));
+end entity eightbitleftshifter;
+architecture Behave of eightbitleftshifter is
+component decisionmux1 is
+	port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+	end component decisionmux1;
+component decisionmux2 is
+	port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+end component decisionmux2;
+component decisionmux3 is
+	port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+end component decisionmux3;
+component decisionmux4 is
+	port(a: in std_logic_vector( 7 downto 0); b:in std_logic;
+         shift: out std_logic_vector( 7 downto 0));
+end component decisionmux4;
+signal firstoutput,secondoutput,thirdoutput, fourthoutput,fifthoutput, sixthoutput,seventhoutput: std_logic_vector( 7 downto 0);
+begin
+		x_1 : decisionmux1 port map ( a=> ain, b=>bin(0), shift=>firstoutput);
+		x_2 : decisionmux2 port map ( a=> firstoutput, b=>bin(1), shift=>secondoutput);
+		x_3 : decisionmux3 port map ( a=> secondoutput, b=>bin(2), shift=>thirdoutput);
+		x_4 : decisionmux4 port map ( a=> thirdoutput, b=>bin(3), shift=>fourthoutput);
+		x_5 : decisionmux4 port map ( a=> fourthoutput, b=>bin(4), shift=>fifthoutput);
+		x_6 : decisionmux4 port map ( a=> fifthoutput, b=>bin(5), shift=>sixthoutput);
+		x_7 : decisionmux4 port map ( a=> sixthoutput, b=>bin(6), shift=>seventhoutput);
+		x_8 : decisionmux4 port map ( a=> seventhoutput, b=>bin(7), shift=>z);
+
+	
+end architecture Behave;
+
+

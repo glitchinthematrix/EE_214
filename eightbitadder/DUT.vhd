@@ -15,9 +15,10 @@ end entity;
 architecture DutWrap of DUT is
 
 	--- Add component of eightbitadder
-component eightbitadder is
-	port(x,y:in std_logic_vector(7 downto 0); z:out std_logic_vector(7 downto 0));
-	end component;	
+  
+component eightbitsubtractor is
+port(x,y:in std_logic_vector(7 downto 0); z:out std_logic_vector(7 downto 0));
+end component eightbitsubtractor;
 	--- Add component of eightbitsubtractor 
 	--- Add component of leftshift
 	--- Add component of rightshift
@@ -27,7 +28,7 @@ begin
 
    -- input/output vector element ordering is critical,
    -- and must match the ordering in the trace file!
-	a: eightbitadder port map(x => input_vector(15 downto 8), y =>input_vector(7 downto 0) , z=> output_vector);
+	a: eightbitsubtractor port map(x => input_vector(15 downto 8), y=>input_vector(7 downto 0) , z=> output_vector);
 --b: leftshift	        port map(x => input_vector(15 downto 8), y =>input_vector(7 downto 0) , z=> output_vector); 
 --c: rightshift          port map(x => input_vector(15 downto 8), y =>input_vector(7 downto 0) , z=> output_vector); 
 --d: eightbitsubtractor  port map(x => input_vector(15 downto 8), y =>input_vector(7 downto 0) , z=> output_vector); --- Note: z = x- y

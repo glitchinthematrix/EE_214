@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/glitchinthematrix/EE_214/eightbitadder/simulation/modelsim
 Edut
-Z1 w1517570026
+Z1 w1518169240
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -21,9 +21,9 @@ Vm?XSUBCHE4ah_1_o`Y60M0
 !s100 241JeAEWD:z5;Wb6B:]<D1
 Z6 OV;C;10.4d;61
 31
-Z7 !s110 1517570217
+Z7 !s110 1518170107
 !i10b 1
-Z8 !s108 1517570217.000000
+Z8 !s108 1518170107.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd|
 Z10 !s107 /home/glitchinthematrix/EE_214/eightbitadder/DUT.vhd|
 !i113 1
@@ -33,10 +33,10 @@ Adutwrap
 R2
 R3
 DEx4 work 3 dut 0 22 m?XSUBCHE4ah_1_o`Y60M0
-l26
+l27
 L15
-V@0cTknzMUWISgPL0JI>l00
-!s100 ?WANnWg1gI^E@L`0ammHZ2
+VLM<VG=]0iS<9Td43Wz:S^3
+!s100 K8aDdOlR=?hP]H<KP:3A53
 R6
 31
 R7
@@ -47,35 +47,35 @@ R10
 !i113 1
 R11
 R12
-Eeightbitadder
-Z13 w1517570075
+Eeightbitsubtractor
+Z13 w1518169965
 R2
 R3
 R0
-Z14 8/home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd
-Z15 F/home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd
+Z14 8/home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd
+Z15 F/home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd
 l0
 L20
-Vc;6zgX6f?7fZ4XWdV3TlB1
-!s100 jDeC<_g_a8<Tkb?5MS]Pe3
+VJc;KQMD;NnDQ@kIQ:hJ7;1
+!s100 mMGC_G=i;0LSa5S1[AYoJ2
 R6
 31
 R7
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd|
-Z17 !s107 /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd|
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd|
+Z17 !s107 /home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd|
 !i113 1
 R11
 R12
 Abehave
 R2
 R3
-DEx4 work 13 eightbitadder 0 22 c;6zgX6f?7fZ4XWdV3TlB1
+DEx4 work 18 eightbitsubtractor 0 22 Jc;KQMD;NnDQ@kIQ:hJ7;1
 l30
 L24
-Va0l3jS4^;JN<USWUDdScK3
-!s100 aaZTGcP=DRiR;N=RCTVbn0
+Vk074Xb2Wih3Pb?C=>7Tmz1
+!s100 TU>>;@Xd89>e=@NiUI1??3
 R6
 31
 R7
@@ -86,7 +86,7 @@ R17
 !i113 1
 R11
 R12
-Efullbitadder
+Efullbitsubtractor
 R13
 R2
 R3
@@ -95,8 +95,8 @@ R14
 R15
 l0
 L6
-VgKDDj6IN^N9mBm:BZ7bAh2
-!s100 e:h8YhJ80L;SXNClmTa2Z2
+VeIL9EfFT_:FVJdLH3BChT1
+!s100 ihI<S_<R7]26aGQKc_dkd0
 R6
 31
 R7
@@ -110,11 +110,11 @@ R12
 Abehave
 R2
 R3
-DEx4 work 12 fullbitadder 0 22 gKDDj6IN^N9mBm:BZ7bAh2
+DEx4 work 17 fullbitsubtractor 0 22 eIL9EfFT_:FVJdLH3BChT1
 l11
 L10
-Vi_Co53WVOkbec_=6N`81`0
-!s100 cQb9<Bcf>87`NnS;UK;E@2
+VVJ@F[Zi1NRWZ;eLBJmml?2
+!s100 9hn[e6QK;0R1Cnz:d5XY[3
 R6
 31
 R7
@@ -126,7 +126,7 @@ R17
 R11
 R12
 Etestbench
-Z18 w1517569688
+Z18 w1518169699
 R3
 R2
 R0
