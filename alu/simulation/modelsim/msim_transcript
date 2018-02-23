@@ -1,136 +1,49 @@
-# do alu_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do alu_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
-# vmap work rtl_work 
+# vmap work gate_work 
 # Copying /home/glitchinthematrix/altera_lite/16.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 17:21:55 on Feb 09,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/eightbitadder/eightbitleftshifter.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity decisionmux1
-# -- Compiling architecture Behave of decisionmux1
-# -- Compiling entity decisionmux2
-# -- Compiling architecture Behave of decisionmux2
-# -- Compiling entity decisionmux3
-# -- Compiling architecture Behave of decisionmux3
-# -- Compiling entity decisionmux4
-# -- Compiling architecture Behave of decisionmux4
-# -- Compiling entity eightbitleftshifter
-# -- Compiling architecture Behave of eightbitleftshifter
-# End time: 17:21:56 on Feb 09,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 17:21:56 on Feb 09,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/eightbitadder/eightbitrightshifter.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity decisionmuxs1
-# -- Compiling architecture Behave of decisionmuxs1
-# -- Compiling entity decisionmuxs2
-# -- Compiling architecture Behave of decisionmuxs2
-# -- Compiling entity decisionmuxs3
-# -- Compiling architecture Behave of decisionmuxs3
-# -- Compiling entity decisionmuxs4
-# -- Compiling architecture Behave of decisionmuxs4
-# -- Compiling entity eightbitrightshifter
-# -- Compiling architecture Behave of eightbitrightshifter
-# End time: 17:21:56 on Feb 09,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 17:21:56 on Feb 09,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/eightbitadder/eightbitsubtractor.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity fullbitsubtractor
-# -- Compiling architecture Behave of fullbitsubtractor
-# -- Compiling entity eightbitsubtractor
-# -- Compiling architecture Behave of eightbitsubtractor
-# End time: 17:21:56 on Feb 09,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 17:21:56 on Feb 09,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/eightbitadder/eightbitadder.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity fullbitadder
-# -- Compiling architecture Behave of fullbitadder
-# -- Compiling entity eightbitadder
-# -- Compiling architecture Behave of eightbitadder
-# End time: 17:21:56 on Feb 09,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/alu/DUT.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 17:21:56 on Feb 09,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/alu/DUT.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity DUT
-# -- Compiling architecture DutWrap of DUT
-# End time: 17:21:56 on Feb 09,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/alu/alu.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 17:21:56 on Feb 09,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/alu/alu.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity alu
-# -- Compiling architecture behave of alu
-# End time: 17:21:56 on Feb 09,2018, Elapsed time: 0:00:00
+# vlog -vlog01compat -work work +incdir+. {alu.vo}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 21:13:32 on Feb 16,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." alu.vo 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 21:13:32 on Feb 16,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/glitchinthematrix/EE_214/alu/Testbench.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 17:21:56 on Feb 09,2018
+# Start time: 21:13:32 on Feb 16,2018
 # vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/alu/Testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 17:21:56 on Feb 09,2018, Elapsed time: 0:00:00
+# End time: 21:13:32 on Feb 16,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 17:21:56 on Feb 09,2018
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L maxv_ver -L gate_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L maxv_ver -L gate_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 21:13:32 on Feb 16,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.testbench(behave)
-# Loading work.dut(dutwrap)
-# Loading work.alu(behave)
-# Loading work.eightbitadder(behave)
-# Loading work.fullbitadder(behave)
-# Loading work.eightbitleftshifter(behave)
-# Loading work.decisionmux1(behave)
-# Loading work.decisionmux2(behave)
-# Loading work.decisionmux3(behave)
-# Loading work.decisionmux4(behave)
-# Loading work.eightbitrightshifter(behave)
-# Loading work.decisionmuxs1(behave)
-# Loading work.decisionmuxs2(behave)
-# Loading work.decisionmuxs3(behave)
-# Loading work.decisionmuxs4(behave)
-# Loading work.eightbitsubtractor(behave)
-# Loading work.fullbitsubtractor(behave)
+# Loading work.DUT
+# Loading maxv_ver.maxv_io
+# Loading maxv_ver.maxv_lcell
+# Loading maxv_ver.maxv_asynch_lcell
+# Loading maxv_ver.maxv_lcell_register
 # 
 # add wave *
 # ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
@@ -139,10 +52,10 @@
 # ** Error: Cannot lock WLF file: "vsim.wlf"
 #           errno 11: Resource temporarily unavailable.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: unknown  Hostname: bhishmasli  ProcessID: 13304
-#           Attempting to use alternate WLF file "./wlftJVzRv6".
+#           File in use by: unknown  Hostname: bhishmasli  ProcessID: 5970
+#           Attempting to use alternate WLF file "./wlftl7gqYV".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftJVzRv6
+#           Using alternate file: ./wlftl7gqYV
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -152,5 +65,6 @@
 #    Time: 1310720 ns  Iteration: 0  Instance: /testbench
 # 
 # stdin: <EOF>
-# End time: 17:22:28 on Feb 09,2018, Elapsed time: 0:00:32
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# End time: 21:18:32 on Feb 16,2018, Elapsed time: 0:05:00
 # Errors: 4, Warnings: 2
