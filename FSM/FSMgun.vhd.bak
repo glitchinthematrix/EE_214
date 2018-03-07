@@ -1,0 +1,106 @@
+library std;
+use std.standard.all;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+package EE224_Components is
+   component INVERTER is
+	port (a: in std_logic; b : out std_logic);
+   end component;
+   component AND_2 is
+	port (a, b: in std_logic; c : out std_logic);
+   end component;
+   component OR_2 is
+	port (a, b: in std_logic; c : out std_logic);
+   end component;
+   component NAND_2 is
+	port (a, b: in std_logic; c : out std_logic);
+   end component;
+   component XOR_2 is
+	port (a, b: in std_logic; c : out std_logic);
+   end component;
+end EE224_Components;
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity AND_5 is
+  port (a, b, c, d, e: in std_logic;
+         out: out std_logic);
+end entity AND_5;
+architecture Behave of AND_5 is
+begin
+  z<= ((((a and b) and c )and d )and e) ;
+end Behave;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+library work;
+use work.EE224_Components.all;
+
+entity FSMGun is
+	port(x: in std_ulogic_vector(6 downto 0);
+		z: out std_ulogic);
+end entity;
+
+architecture behave of FSMGun is
+ component DFF is
+	port (D, CLK: in std_logic; Q: out std_logic);
+ end component;		
+
+ component AND_5 is
+ port (a, b, c, d, e: in std_logic;
+         out: out std_logic);
+  end component;       
+ signal inv4, inv3, inv2, inv1, inv0, invr, invq0, isn, isu, isg: std_logic;
+ signal q: std_ulogic_vector(1 downto 0);
+ signal nq: std_ulogic_vector( 1 downto 0);
+ begin:
+
+ x4_inv: INVERTER port map (a=>x(4), b =>inv4);
+
+ x3_inv: INVERTER port map (a=>x(3), b =>inv3);
+
+ x2_inv: INVERTER port map (a=>x(2), b =>inv2);
+
+ x1_inv: INVERTER port map (a=>x(1), b =>inv1);
+
+ x0_inv: INVERTER port map (a=>x(0), b =>inv0);
+
+ q0_inv: INVERTER port map (a=>q(0), b =>invq0);
+
+ r_inv: INVERTER port map (a=>x(6), b =>invr);
+
+ isgFSM: AND_5 port map( a=>inv4, b=>inv3, c=>x(2), d=>x(1), e=>x(0), out=>isg);
+
+ isuFSM: AND_5 port map( a=>x(4), b=>inv3, c=>x(2), d=>inv1, e=>x(0), out=>isu);
+
+ isnFSM: AND_5 port map (a=>inv4, b=>x(3), c=>x(2), d=>x(1), e=>inv0, out=>isn);
+
+ z<= (invr and isn and q(1) and not(q(0)));
+
+ nq(1)<=((invr and not(isn) and q(1) and not(q(0))) or ((invr) and isu and not(q(1)) and q(0)));
+
+ nq(0)<=((invr and isg and not(q(1)) and not(q(0))) or (not(isu) and invr and not(q(1)) and not(q(0)))) ;
+
+ DFFclock1: DFF port map ( D=>nq(1), CLK=>x(5), Q=>q(1));
+
+ DFFclock2: DFF port map ( D=>nq(0), CLK=>x(5), Q=>q(0));
+
+
+end Behave;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

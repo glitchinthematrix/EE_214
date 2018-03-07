@@ -1,0 +1,150 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/glitchinthematrix/EE_214/FSM/simulation/modelsim
+Eand_5
+Z1 w1519383279
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd
+Z5 F/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd
+l0
+L6
+VCYz:6IoJ[iP@UIz:R=f7G2
+!s100 f@24_LLPUiX9PBRI2SKQ;2
+Z6 OV;C;10.4d;61
+31
+Z7 !s110 1519383323
+!i10b 1
+Z8 !s108 1519383323.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd|
+Z10 !s107 /home/glitchinthematrix/EE_214/FSM/FSMgun.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Abehave
+R2
+R3
+DEx4 work 5 and_5 0 22 CYz:6IoJ[iP@UIz:R=f7G2
+l11
+L10
+VR_D6_Ai;j1_foLzb6h6SS3
+!s100 mo?Y=R:8nIYCHACH0YF8O2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edff1
+Z13 w1519382407
+R2
+R3
+R0
+Z14 8/home/glitchinthematrix/EE_214/FSM/DFF.vhdl
+Z15 F/home/glitchinthematrix/EE_214/FSM/DFF.vhdl
+l0
+L11
+VJMzzBNbnY`[OhbYBNDcTc0
+!s100 0I?jVjNHik2>giB<8YEJ41
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/DFF.vhdl|
+Z17 !s107 /home/glitchinthematrix/EE_214/FSM/DFF.vhdl|
+!i113 1
+R11
+R12
+Awhatdoyoucare
+R2
+R3
+DEx4 work 4 dff1 0 22 JMzzBNbnY`[OhbYBNDcTc0
+l16
+L15
+V=:=F9<3k;c[dK4<f<fD[;2
+!s100 VLL`A51ehG:CCI4ST`zDL2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Pee224_components
+R2
+R3
+w1516868812
+R0
+8/home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd
+F/home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd
+l0
+L7
+Vf]:4N9OdKofEZOQ>22L_D1
+!s100 f;;]jMk6kHEMFYhH:_g321
+R6
+31
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd|
+!s107 /home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd|
+!i113 1
+R11
+R12
+Efsmgun
+R1
+Z18 DPx4 work 16 ee224_components 0 22 f]:4N9OdKofEZOQ>22L_D1
+R2
+R3
+R0
+R4
+R5
+l0
+L21
+V0Ph8Vd0_dfOI6md9ZFS5a2
+!s100 G]W9oQ0[`W]0MH0@5el[K0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehave
+R18
+R2
+R3
+DEx4 work 6 fsmgun 0 22 0Ph8Vd0_dfOI6md9ZFS5a2
+l38
+L26
+VLVU[E?1S@Il2e?NHbemDD1
+!s100 ?W_;83_A>YzK@6W=a<moi1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
