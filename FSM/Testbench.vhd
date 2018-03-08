@@ -15,43 +15,71 @@ architecture Behave of Testbench is
   --  edit the following lines to set the number of i/o's of your
   --  DUT.
   ----------------------------------------------------------------
-  constant number_of_inputs  : integer := 18;  -- # input bits to your design. 
-  constant number_of_outputs : integer := 8;  -- # output bits from your design.
+  constant number_of_inputs  : integer := 7;  -- # input bits to your design. 
+  constant number_of_outputs : integer := 1;  -- # output bits from your design.
 
   -- component port widths..
   component DUT is
-   port(input_vector: in std_logic_vector(number_of_inputs-1  downto 0);    
-       	output_vector: out std_logic_vector(number_of_outputs-1 downto 0));
+   port(input_vector: in std_ulogic_vector(number_of_inputs-1  downto 0);    
+       	output_vector: out std_ulogic_vector(number_of_outputs-1 downto 0));
   end component;
 
   -- end editing.
   ----------------------------------------------------------------
   ----------------------------------------------------------------
 
-  signal input_vector  : bit_vector(number_of_inputs-1 downto 0);
-  signal output_vector : bit_vector(number_of_outputs-1 downto 0);
-  signal std_output_vector : std_logic_vector(number_of_outputs-1 downto 0);
+  signal input_vector  : std_ulogic_vector(number_of_inputs-1 downto 0);
+  signal output_vector : std_ulogic_vector(number_of_outputs-1 downto 0);
 
-  -- create a constrained string outof
-  function to_string(x: string) return string is
+
+	 function to_string(x: string) return string is
       variable ret_val: string(1 to x'length);
       alias lx : string (1 to x'length) is x;
   begin  
       ret_val := lx;
       return(ret_val);
   end to_string;
+  
+    function to_std_ulogic_vector(x: bit_vector) return std_ulogic_vector is
+      variable ret_val: std_ulogic_vector(1 to x'length);
+      alias lx: bit_vector(1 to x'length) is x;
+  begin
+ 	for I in 1 to x'length loop
+		if(lx(I) = '1') then
+			ret_val(I) := '1';
+		else
+			ret_val(I) := '0';
+		end if;
+	end loop;
+	return(ret_val);
+  end to_std_ulogic_vector;
+
+  function to_bit_vector(x: std_ulogic_vector) return bit_vector is
+      variable ret_val: bit_vector(1 to x'length);
+      alias lx: std_ulogic_vector(1 to x'length) is x;
+  begin
+ 	for I in 1 to x'length loop
+		if(lx(I) = '1') then
+			ret_val(I) := '1';
+		else
+			ret_val(I) := '0';
+		end if;
+	end loop;
+	return(ret_val);
+  end to_bit_vector;
 
 begin
   process 
     variable err_flag : boolean := false;
-    File INFILE: text open read_mode is "../../alu_TRACEFILE.txt";
+    File INFILE: text open read_mode is "../../tracefile1.txt";
     FILE OUTFILE: text  open write_mode is "OUTPUTS.txt";
 
     ---------------------------------------------------
     -- edit the next two lines to customize
     ---------------------------------------------------
     variable input_vector_var: bit_vector (number_of_inputs-1 downto 0);
-    variable output_vector_var: bit_vector (number_of_outputs-1 downto 0);
+	 variable output_vector_var: bit_vector (number_of_outputs-1 downto 0);
+    variable expected_output_vector_var: bit_vector (number_of_outputs-1 downto 0);
     variable output_mask_var: bit_vector (number_of_outputs-1 downto 0);
     variable output_comp_var: bit_vector (number_of_outputs-1 downto 0);
     constant ZZZZ : bit_vector(number_of_outputs-1 downto 0) := (others => '0');
@@ -75,17 +103,20 @@ begin
 	  -- read input at current time.
 	  readLine (INFILE, INPUT_LINE);
           read (INPUT_LINE, input_vector_var);
-          read (INPUT_LINE, output_vector_var);
+          read (INPUT_LINE, expected_output_vector_var);
           read (INPUT_LINE, output_mask_var);
 	
 	  -- apply input.
-          input_vector <= input_vector_var;
+          input_vector <= to_std_ulogic_vector(input_vector_var);
 
 	  -- wait for the circuit to settle 
 	  wait for 1 ns;
 
+    --apply output.
+          output_vector_var:= to_bit_vector(output_vector);
+
 	  -- check output.
-          output_comp_var := (output_mask_var and (output_vector xor output_vector_var));
+          output_comp_var := (output_mask_var and (output_vector_var xor expected_output_vector_var));
 	  if (output_comp_var  /= ZZZZ) then
              write(OUTPUT_LINE,to_string("ERROR: line "));
              write(OUTPUT_LINE, LINE_COUNT);
@@ -93,9 +124,9 @@ begin
              err_flag := true;
           end if;
 
-          write(OUTPUT_LINE, input_vector);
+          write(OUTPUT_LINE, input_vector_var);
           write(OUTPUT_LINE, to_string(" "));
-          write(OUTPUT_LINE, output_vector);
+          write(OUTPUT_LINE, output_vector_var);
           writeline(OUTFILE, OUTPUT_LINE);
 
 	  -- advance time by 4 ns.
@@ -108,8 +139,7 @@ begin
     wait;
   end process;
 
-	output_vector <= to_bitvector(std_output_vector);
   dut_instance: DUT 
-     	port map(input_vector => to_stdlogicvector(input_vector), output_vector =>std_output_vector );
+     	port map(input_vector => input_vector, output_vector =>output_vector );
 
 end Behave;

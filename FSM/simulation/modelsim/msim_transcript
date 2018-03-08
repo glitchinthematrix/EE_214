@@ -9,111 +9,135 @@
 # Copying /home/glitchinthematrix/altera_lite/16.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd}
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 16:25:23 on Feb 23,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd 
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling package EE224_Components
-# End time: 16:25:23 on Feb 23,2018, Elapsed time: 0:00:00
+# -- Compiling entity StringrecFSM
+# -- Compiling architecture Behave of StringrecFSM
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/DFF.vhdl}
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 16:25:23 on Feb 23,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/DFF.vhdl 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity DFF1
-# -- Compiling architecture WhatDoYouCare of DFF1
-# End time: 16:25:23 on Feb 23,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 16:25:23 on Feb 23,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMgun.vhd 
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity AND_5
 # -- Compiling architecture Behave of AND_5
-# -- Loading package EE224_Components
+# -- Compiling entity FSMTerror
+# -- Compiling architecture behave of FSMTerror
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/DUT.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/DUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/DFF1.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/DFF1.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DFF1
+# -- Compiling architecture WhatDoYouCare of DFF1
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FSMKnife
+# -- Compiling architecture behave of FSMKnife
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package EE224_Components
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMgun.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
 # -- Compiling entity FSMGun
 # -- Compiling architecture behave of FSMGun
-# End time: 16:25:23 on Feb 23,2018, Elapsed time: 0:00:00
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package EE224_Components
+# -- Compiling entity FSMBomb
+# -- Compiling architecture behave of FSMBomb
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/Testbench.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 20:32:58 on Mar 08,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # 
-# stdin: <EOF>
-vsim work.fsmgun
-# vsim work.fsmgun 
-# Start time: 16:25:31 on Feb 23,2018
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 20:32:58 on Mar 08,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.ee224_components
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.stringrecfsm(behave)
 # Loading work.fsmgun(behave)
 # Loading work.and_5(behave)
 # Loading work.dff1(whatdoyoucare)
-force -freeze sim:/fsmgun/x 11000 0
-# Value length (5) does not equal array index length (7).
+# Loading work.ee224_components
+# Loading work.fsmbomb(behave)
+# Loading work.fsmterror(behave)
+# Loading work.fsmknife(behave)
 # 
-# ** Error: (vsim-4011) Invalid force value: 11000 0.
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 1090 ns  Iteration: 0  Instance: /testbench
 # 
-run
-add wave -position end  sim:/fsmgun/z
-add wave -position end  sim:/fsmgun/q
-add wave -position end  sim:/fsmgun/nq
-run
-force -freeze sim:/fsmgun/x 1100111 0
-force -freeze sim:/fsmgun/x 1100111 0
-run
-force -freeze sim:/fsmgun/q 00 0
-run
-run
-force -freeze sim:/fsmgun/x 0100111 0
-run
-run
-force -freeze sim:/fsmgun/q 01 0
-force -freeze sim:/fsmgun/x 0110101 0
-run
-run
-force -freeze sim:/fsmgun/x 0101110 0
-force -freeze sim:/fsmgun/q 10 0
-run
-force -freeze sim:/fsmgun/x(5) 1 0, 0 {50 ps} -r 100
-run
-run
-run
-run
-run
-run
-add wave -position 0  sim:/fsmgun/x
-force -freeze sim:/fsmgun/x {} 0
-# Value length (0) does not equal array index length (7).
-# 
-# ** Error: (vsim-4011) Invalid force value: {} 0.
-# 
-force -freeze sim:/fsmgun/x 0000000 0
-run
-run
-run
-run
-run
-run
-force -freeze sim:/fsmgun/x 0100111 0
-restart
-run
-run
-run
-run
-force -freeze sim:/fsmgun/x 0110101 0
-run
-run
-run
-run
-# Window cannot be closed because the modal window "Quit Vsim" is still open.
-# End time: 16:33:43 on Feb 23,2018, Elapsed time: 0:08:12
-# Errors: 2, Warnings: 1
+# stdin: <EOF>
+# End time: 20:34:36 on Mar 08,2018, Elapsed time: 0:01:38
+# Errors: 0, Warnings: 0

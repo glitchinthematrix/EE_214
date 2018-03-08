@@ -2,15 +2,15 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'x[5]'
-Slack : -2.859
-TNS   : -5.711
+Type  : Setup 'input_vector[5]'
+Slack : -3.884
+TNS   : -28.884
 
-Type  : Hold 'x[5]'
-Slack : 2.201
+Type  : Hold 'input_vector[5]'
+Slack : 1.687
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'x[5]'
+Type  : Minimum Pulse Width 'input_vector[5]'
 Slack : -2.289
 TNS   : -2.289
 

@@ -9,23 +9,23 @@ z2
 cModel Technology
 Z0 d/home/glitchinthematrix/EE_214/FSM/simulation/modelsim
 Eand_5
-Z1 w1519383279
+Z1 w1520507241
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd
-Z5 F/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd
+Z4 8/home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd
+Z5 F/home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd
 l0
 L6
 VCYz:6IoJ[iP@UIz:R=f7G2
 !s100 f@24_LLPUiX9PBRI2SKQ;2
 Z6 OV;C;10.4d;61
 31
-Z7 !s110 1519383323
+Z7 !s110 1520521378
 !i10b 1
-Z8 !s108 1519383323.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd|
-Z10 !s107 /home/glitchinthematrix/EE_214/FSM/FSMgun.vhd|
+Z8 !s108 1520521378.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd|
+Z10 !s107 /home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1
@@ -52,8 +52,8 @@ Z13 w1519382407
 R2
 R3
 R0
-Z14 8/home/glitchinthematrix/EE_214/FSM/DFF.vhdl
-Z15 F/home/glitchinthematrix/EE_214/FSM/DFF.vhdl
+Z14 8/home/glitchinthematrix/EE_214/FSM/DFF1.vhdl
+Z15 F/home/glitchinthematrix/EE_214/FSM/DFF1.vhdl
 l0
 L11
 VJMzzBNbnY`[OhbYBNDcTc0
@@ -63,8 +63,8 @@ R6
 R7
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/DFF.vhdl|
-Z17 !s107 /home/glitchinthematrix/EE_214/FSM/DFF.vhdl|
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/DFF1.vhdl|
+Z17 !s107 /home/glitchinthematrix/EE_214/FSM/DFF1.vhdl|
 !i113 1
 R11
 R12
@@ -83,6 +83,45 @@ R7
 R8
 R16
 R17
+!i113 1
+R11
+R12
+Edut
+Z18 w1520515499
+R2
+R3
+R0
+Z19 8/home/glitchinthematrix/EE_214/FSM/DUT.vhd
+Z20 F/home/glitchinthematrix/EE_214/FSM/DUT.vhd
+l0
+L10
+V?I`PEj;ma@@AN3GVLUkU62
+!s100 R4@i@i[QU3_j65SA6?3ez0
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/DUT.vhd|
+Z22 !s107 /home/glitchinthematrix/EE_214/FSM/DUT.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 ?I`PEj;ma@@AN3GVLUkU62
+l22
+L15
+VMJaWb^3]<HP1]h=ekd;:S1
+!s100 I8PNM:XWDzl2SRO5SJLm^2
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
 !i113 1
 R11
 R12
@@ -107,18 +146,136 @@ R8
 !i113 1
 R11
 R12
+Efsmbomb
+Z23 w1520488081
+Z24 DPx4 work 16 ee224_components 0 22 f]:4N9OdKofEZOQ>22L_D1
+R2
+R3
+R0
+Z25 8/home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd
+Z26 F/home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd
+l0
+L11
+VP7PZDT9Tno[4a;LL391D_1
+!s100 NOTfT[U9hdC`gYR9i@a841
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd|
+Z28 !s107 /home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd|
+!i113 1
+R11
+R12
+Abehave
+R24
+R2
+R3
+DEx4 work 7 fsmbomb 0 22 P7PZDT9Tno[4a;LL391D_1
+l28
+L16
+VJ;nhjaHTPOQ?B]Ii`jW[I3
+!s100 L]lWW@lEWWT1>;fL[?[@o0
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
 Efsmgun
+Z29 w1520444062
+R2
+R3
+R0
+Z30 8/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd
+Z31 F/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd
+l0
+L8
+VFm>E[>NH5[7bUE3hMNAQN3
+!s100 f<l@`LM@Q=YSf]__HKPnO3
+R6
+31
+R7
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd|
+Z33 !s107 /home/glitchinthematrix/EE_214/FSM/FSMgun.vhd|
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 6 fsmgun 0 22 Fm>E[>NH5[7bUE3hMNAQN3
+l25
+L13
+VOU0lbAC0]IZL=^zbffoF@0
+!s100 zSn_UmLP_ZA;OR<gF:Z1N1
+R6
+31
+R7
+!i10b 1
+R8
+R32
+R33
+!i113 1
+R11
+R12
+Efsmknife
+Z34 w1520521315
+R2
+R3
+R0
+Z35 8/home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd
+Z36 F/home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd
+l0
+L10
+VLUeGzM>GlNS[H`oQjP[Eg1
+!s100 Lg14I6WWE[4lPoBWd2QCc3
+R6
+31
+R7
+!i10b 1
+R8
+Z37 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd|
+Z38 !s107 /home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd|
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 8 fsmknife 0 22 LUeGzM>GlNS[H`oQjP[Eg1
+l27
+L15
+V5R_?AR8EBoP@N79k5dQE`3
+!s100 K:hXM4?8RFGf?4R=XQd_I0
+R6
+31
+R7
+!i10b 1
+R8
+R37
+R38
+!i113 1
+R11
+R12
+Efsmterror
 R1
-Z18 DPx4 work 16 ee224_components 0 22 f]:4N9OdKofEZOQ>22L_D1
 R2
 R3
 R0
 R4
 R5
 l0
-L21
-V0Ph8Vd0_dfOI6md9ZFS5a2
-!s100 G]W9oQ0[`W]0MH0@5el[K0
+L18
+Vg66TAJ_?S0S0G2R]1UM][1
+!s100 ozjn@ek<A[AHQ@b9JjRAd0
 R6
 31
 R7
@@ -130,14 +287,13 @@ R10
 R11
 R12
 Abehave
-R18
 R2
 R3
-DEx4 work 6 fsmgun 0 22 0Ph8Vd0_dfOI6md9ZFS5a2
-l38
-L26
-VLVU[E?1S@Il2e?NHbemDD1
-!s100 ?W_;83_A>YzK@6W=a<moi1
+DEx4 work 9 fsmterror 0 22 g66TAJ_?S0S0G2R]1UM][1
+l35
+L23
+VI5>C_6_H;kKYDEC4;ooh90
+!s100 kjG6J95HGa7cVUTQL[2^N3
 R6
 31
 R7
@@ -145,6 +301,84 @@ R7
 R8
 R9
 R10
+!i113 1
+R11
+R12
+Estringrecfsm
+Z39 w1520518189
+R2
+R3
+R0
+Z40 8/home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd
+Z41 F/home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd
+l0
+L7
+Vgb9ZdbW:7Im<l>E;bTGR23
+!s100 VHhb>d>`iAf7d:aJ?[^f;3
+R6
+31
+R7
+!i10b 1
+R8
+Z42 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd|
+Z43 !s107 /home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd|
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 12 stringrecfsm 0 22 gb9ZdbW:7Im<l>E;bTGR23
+l35
+L11
+VU8XL6^Re98?L^h5Z5iOJ42
+!s100 `NS`L4VHT<PbJf6cZB_UV0
+R6
+31
+R7
+!i10b 1
+R8
+R42
+R43
+!i113 1
+R11
+R12
+Etestbench
+Z44 w1520518934
+R3
+R2
+R0
+Z45 8/home/glitchinthematrix/EE_214/FSM/Testbench.vhd
+Z46 F/home/glitchinthematrix/EE_214/FSM/Testbench.vhd
+l0
+L10
+V@5iQ<LF@c19<e]mQMaJza0
+!s100 h`<<f5Y0?55R4a`U0c<TP2
+R6
+31
+R7
+!i10b 1
+R8
+Z47 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/Testbench.vhd|
+Z48 !s107 /home/glitchinthematrix/EE_214/FSM/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 @5iQ<LF@c19<e]mQMaJza0
+l71
+L12
+VI;4::glZD5G^fO?QO[ECg1
+!s100 aL?_Xj=]SB2flHW_UVd@01
+R6
+31
+R7
+!i10b 1
+R8
+R47
+R48
 !i113 1
 R11
 R12

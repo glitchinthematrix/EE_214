@@ -51,11 +51,14 @@ architecture behave of FSMKnife is
 
  z<= (invr and ise and q(2) and not(q(1)) and not(q(0)));
 
- nq(2)<= ((invr and isf and not(x(2)) and x(1) and x(0)) or (invr and not(ise) and  q(2) and not(q(1)) and not(q(0))));
+ nq(2)<= ((invr and isf and not(q(2)) and q(1) and q(0)) or (invr and not(ise) and  q(2) and not(q(1)) and not(q(0))));
 
- nq(1)<= ((invr and not(x(2)) and x(1) and not(x(0))) or (invr and not(isf) and not(x(2)) and x(1) and x(0) ));
+ nq(1)<= ((invr and not(q(2)) and q(1) and not(q(0))) or (invr and not(isf) and not(q(2)) and q(1) and q(0) ) or (invr and isn and not(q(2)) and not(q(1)) and q(0)));
 
- nq(0)<=((invr and isk and not(q(0)) and not(q(1)) and not(q(2))) or (invr and not(isn) and q(0) and not(q(1)) and not(q(2))) or ( invr and not(x(2)) and x(1) and not(x(0)) and isi) or (invr and not(isf) and not(x(2)) and x(1) and x(0) ) );
+ nq(0)<=((invr and isk and not(q(0)) and not(q(1)) and not(q(2))) or (invr and not(isn) and q(0) and not(q(1)) and not(q(2))) or ( invr and not(q(2)) and q(1) and not(q(0)) and isi) or (invr and not(isf) and not(q(2)) and q(1) and q(0) ) );
+
+ 
+ DFFclock3: DFF1 port map ( D=>nq(2), CLK=>x(5), Q=>q(2));
 
  DFFclock1: DFF1 port map ( D=>nq(1), CLK=>x(5), Q=>q(1));
 

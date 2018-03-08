@@ -1,5 +1,5 @@
 Flow report for Stringreconize
-Wed Mar  7 23:04:51 2018
+Thu Mar  8 20:32:44 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Mar  7 23:04:51 2018       ;
+; Flow Status           ; Successful - Thu Mar  8 20:32:44 2018       ;
 ; Quartus Prime Version ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name         ; Stringreconize                              ;
-; Top-level Entity Name ; FSMGun                                      ;
+; Top-level Entity Name ; DUT                                         ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M1270ZF256C5                               ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 10 / 1,270 ( < 1 % )                        ;
+; Total logic elements  ; 50 / 1,270 ( 4 % )                          ;
 ; Total pins            ; 8 / 211 ( 4 % )                             ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
@@ -60,27 +60,33 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/07/2018 23:04:25 ;
+; Start date & time ; 03/08/2018 20:32:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Stringreconize      ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                            ;
-+-------------------------------+-----------------------------+----------------+-------------+----------------+
-; Assignment Name               ; Value                       ; Default Value  ; Entity Name ; Section Id     ;
-+-------------------------------+-----------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID         ; 0.152044406503682           ; --             ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT        ; Verilog Hdl                 ; --             ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL           ; ModelSim-Altera (Verilog)   ; <None>         ; --          ; --             ;
-; EDA_TIME_SCALE                ; 1 ps                        ; --             ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP        ; 85                          ; --             ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP        ; 0                           ; --             ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air ; --             ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY      ; output_files                ; --             ; --          ; --             ;
-; TOP_LEVEL_ENTITY              ; FSMgun                      ; Stringreconize ; --          ; --             ;
-+-------------------------------+-----------------------------+----------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                   ;
++--------------------------------------+-----------------------------+----------------+-------------+----------------+
+; Assignment Name                      ; Value                       ; Default Value  ; Entity Name ; Section Id     ;
++--------------------------------------+-----------------------------+----------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 0.152052134410230           ; --             ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; dut_instance                ; --             ; --          ; Testbench      ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Testbench                   ; --             ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                 ; --             ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)   ; <None>         ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE             ; --             ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; Testbench.vhd               ; --             ; --          ; Testbench      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Testbench                   ; --             ; --          ; Testbench      ;
+; EDA_TEST_BENCH_NAME                  ; Testbench                   ; --             ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                        ; --             ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                          ; --             ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                           ; --             ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; No Heat Sink With Still Air ; --             ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                ; --             ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; DUT                         ; Stringreconize ; --          ; --             ;
++--------------------------------------+-----------------------------+----------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -88,12 +94,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 1222 MB             ; 00:00:31                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 1266 MB             ; 00:00:02                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 1038 MB             ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 1005 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 1233 MB             ; 00:00:36                           ;
+; Fitter                    ; 00:00:01     ; 1.0                     ; 1266 MB             ; 00:00:01                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 1039 MB             ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 1004 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1286 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:34                           ;
+; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:38                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Stringreconize
-Wed Mar  7 23:04:49 2018
+Thu Mar  8 20:32:42 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -16,8 +16,8 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   8. Recovery Summary
   9. Removal Summary
  10. Minimum Pulse Width Summary
- 11. Setup: 'x[5]'
- 12. Hold: 'x[5]'
+ 11. Setup: 'input_vector[5]'
+ 12. Hold: 'input_vector[5]'
  13. Setup Transfers
  14. Hold Transfers
  15. Report TCCS
@@ -77,41 +77,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                           ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets  ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
-; x[5]       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { x[5] } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                           ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; Clock Name      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets             ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
+; input_vector[5] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { input_vector[5] } ;
++-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
 
 
-+--------------------------------------------------+
-; Fmax Summary                                     ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 259.13 MHz ; 259.13 MHz      ; x[5]       ;      ;
-+------------+-----------------+------------+------+
++-------------------------------------------------------+
+; Fmax Summary                                          ;
++------------+-----------------+-----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
++------------+-----------------+-----------------+------+
+; 204.75 MHz ; 204.75 MHz      ; input_vector[5] ;      ;
++------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+--------------------------------+
-; Setup Summary                  ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; x[5]  ; -2.859 ; -5.711        ;
-+-------+--------+---------------+
++------------------------------------------+
+; Setup Summary                            ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; input_vector[5] ; -3.884 ; -28.884       ;
++-----------------+--------+---------------+
 
 
-+-------------------------------+
-; Hold Summary                  ;
-+-------+-------+---------------+
-; Clock ; Slack ; End Point TNS ;
-+-------+-------+---------------+
-; x[5]  ; 2.201 ; 0.000         ;
-+-------+-------+---------------+
++-----------------------------------------+
+; Hold Summary                            ;
++-----------------+-------+---------------+
+; Clock           ; Slack ; End Point TNS ;
++-----------------+-------+---------------+
+; input_vector[5] ; 1.687 ; 0.000         ;
++-----------------+-------+---------------+
 
 
 --------------------
@@ -126,56 +126,100 @@ No paths to report.
 No paths to report.
 
 
-+--------------------------------+
-; Minimum Pulse Width Summary    ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; x[5]  ; -2.289 ; -2.289        ;
-+-------+--------+---------------+
++------------------------------------------+
+; Minimum Pulse Width Summary              ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; input_vector[5] ; -2.289 ; -2.289        ;
++-----------------+--------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Setup: 'x[5]'                                                                                                      ;
-+--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
-; -2.859 ; DFF1:DFFclock2|Q ; DFF1:DFFclock2|Q ; x[5]         ; x[5]        ; 1.000        ; 0.000      ; 3.526      ;
-; -2.852 ; DFF1:DFFclock2|Q ; DFF1:DFFclock1|Q ; x[5]         ; x[5]        ; 1.000        ; 0.000      ; 3.519      ;
-; -2.485 ; DFF1:DFFclock1|Q ; DFF1:DFFclock2|Q ; x[5]         ; x[5]        ; 1.000        ; 0.000      ; 3.152      ;
-; -2.478 ; DFF1:DFFclock1|Q ; DFF1:DFFclock1|Q ; x[5]         ; x[5]        ; 1.000        ; 0.000      ; 3.145      ;
-+--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'input_vector[5]'                                                                                                                                                                  ;
++--------+--------------------------------------------------+--------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                          ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+--------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; -3.884 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 4.551      ;
+; -3.816 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 4.483      ;
+; -3.785 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 4.452      ;
+; -3.723 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 4.390      ;
+; -3.568 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 4.235      ;
+; -3.438 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 4.105      ;
+; -3.373 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 4.040      ;
+; -3.268 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.935      ;
+; -3.219 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.886      ;
+; -3.191 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.858      ;
+; -3.173 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.840      ;
+; -3.141 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.808      ;
+; -3.097 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.764      ;
+; -2.998 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.665      ;
+; -2.937 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.604      ;
+; -2.848 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.515      ;
+; -2.761 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.428      ;
+; -2.701 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.368      ;
+; -2.489 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 3.156      ;
+; -1.872 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 2.539      ;
+; -1.739 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 2.406      ;
+; -1.528 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 2.195      ;
+; -1.519 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 2.186      ;
+; -1.505 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 2.172      ;
+; -1.270 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 1.937      ;
+; -1.241 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; input_vector[5] ; input_vector[5] ; 1.000        ; 0.000      ; 1.908      ;
++--------+--------------------------------------------------+--------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Hold: 'x[5]'                                                                                                      ;
-+-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
-; 2.201 ; DFF1:DFFclock1|Q ; DFF1:DFFclock1|Q ; x[5]         ; x[5]        ; 0.000        ; 0.000      ; 2.422      ;
-; 2.208 ; DFF1:DFFclock1|Q ; DFF1:DFFclock2|Q ; x[5]         ; x[5]        ; 0.000        ; 0.000      ; 2.429      ;
-; 2.563 ; DFF1:DFFclock2|Q ; DFF1:DFFclock2|Q ; x[5]         ; x[5]        ; 0.000        ; 0.000      ; 2.784      ;
-; 2.575 ; DFF1:DFFclock2|Q ; DFF1:DFFclock1|Q ; x[5]         ; x[5]        ; 0.000        ; 0.000      ; 2.796      ;
-+-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'input_vector[5]'                                                                                                                                                                  ;
++-------+--------------------------------------------------+--------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                          ; Launch Clock    ; Latch Clock     ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+--------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
+; 1.687 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 1.908      ;
+; 1.716 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 1.937      ;
+; 1.951 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.172      ;
+; 1.965 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.186      ;
+; 1.974 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.195      ;
+; 2.005 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.226      ;
+; 2.185 ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2|Q    ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.406      ;
+; 2.242 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.463      ;
+; 2.318 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.539      ;
+; 2.582 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.803      ;
+; 2.715 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.936      ;
+; 2.724 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.945      ;
+; 2.776 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 2.997      ;
+; 2.935 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2|Q   ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.156      ;
+; 3.166 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.387      ;
+; 3.211 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.432      ;
+; 3.222 ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1|Q   ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.443      ;
+; 3.237 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.458      ;
+; 3.254 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.475      ;
+; 3.330 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.551      ;
+; 3.373 ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3|Q ; StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2|Q ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.594      ;
+; 3.457 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.678      ;
+; 3.524 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.745      ;
+; 3.525 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.746      ;
+; 3.568 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 3.789      ;
+; 4.043 ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1|Q  ; input_vector[5] ; input_vector[5] ; 0.000        ; 0.000      ; 4.264      ;
++-------+--------------------------------------------------+--------------------------------------------------+-----------------+-----------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------+
-; Setup Transfers                                                   ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; x[5]       ; x[5]     ; 8        ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------+
+; Setup Transfers                                                               ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; input_vector[5] ; input_vector[5] ; 53       ; 0        ; 0        ; 0        ;
++-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------+
-; Hold Transfers                                                    ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; x[5]       ; x[5]     ; 8        ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------+
+; Hold Transfers                                                                ;
++-----------------+-----------------+----------+----------+----------+----------+
+; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------+-----------------+----------+----------+----------+----------+
+; input_vector[5] ; input_vector[5] ; 53       ; 0        ; 0        ; 0        ;
++-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -199,65 +243,65 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 6     ; 6    ;
-; Unconstrained Input Port Paths  ; 18    ; 18   ;
+; Unconstrained Input Port Paths  ; 66    ; 66   ;
 ; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
 +---------------------------------+-------+------+
 
 
-+-------------------------------------+
-; Clock Status Summary                ;
-+--------+-------+------+-------------+
-; Target ; Clock ; Type ; Status      ;
-+--------+-------+------+-------------+
-; x[5]   ; x[5]  ; Base ; Constrained ;
-+--------+-------+------+-------------+
++--------------------------------------------------------+
+; Clock Status Summary                                   ;
++-----------------+-----------------+------+-------------+
+; Target          ; Clock           ; Type ; Status      ;
++-----------------+-----------------+------+-------------+
+; input_vector[5] ; input_vector[5] ; Base ; Constrained ;
++-----------------+-----------------+------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; x[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; Input Port      ; Comment                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; input_vector[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; z           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; Output Port      ; Comment                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; output_vector[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; x[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; x[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; Input Port      ; Comment                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; input_vector[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; input_vector[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; z           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; Output Port      ; Comment                                                                               ;
++------------------+---------------------------------------------------------------------------------------+
+; output_vector[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------+
@@ -266,7 +310,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Wed Mar  7 23:04:48 2018
+    Info: Processing started: Thu Mar  8 20:32:42 2018
 Info: Command: quartus_sta Stringreconize -c Stringreconize
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -277,31 +321,31 @@ Info (334004): Delay annotation completed successfully
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Stringreconize.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name x[5] x[5]
+    Info (332105): create_clock -period 1.000 -name input_vector[5] input_vector[5]
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.859
+Info (332146): Worst-case setup slack is -3.884
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.859              -5.711 x[5] 
-Info (332146): Worst-case hold slack is 2.201
+    Info (332119):    -3.884             -28.884 input_vector[5] 
+Info (332146): Worst-case hold slack is 1.687
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.201               0.000 x[5] 
+    Info (332119):     1.687               0.000 input_vector[5] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.289              -2.289 x[5] 
+    Info (332119):    -2.289              -2.289 input_vector[5] 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1005 megabytes
-    Info: Processing ended: Wed Mar  7 23:04:49 2018
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 1004 megabytes
+    Info: Processing ended: Thu Mar  8 20:32:42 2018
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

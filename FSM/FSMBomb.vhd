@@ -1,16 +1,6 @@
 library std;
 use std.standard.all;
 
-library ieee;
-use ieee.std_logic_1164.all;
-entity AND_5 is
-  port (a, b, c, d, e: in std_logic;
-         outp: out std_logic);
-end entity AND_5;
-architecture Behave of AND_5 is
-begin
-  outp<= ((((a and b) and c )and d )and e) ;
-end Behave;
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -51,9 +41,9 @@ architecture behave of FSMBomb is
 
  isbFSM: AND_5 port map( a=>inv4, b=>inv3, c=>inv2, d=>x(1), e=>inv0, outp=>isb);
 
- isoFSM: AND_5 port map( a=>inv4, b=>x(3), c=>x(2), d=>inv1, e=>x(0), outp=>iso);
+ isoFSM: AND_5 port map( a=>inv4, b=>x(3), c=>x(2), d=>x(1), e=>x(0), outp=>iso);
 
- ismFSM: AND_5 port map (a=>inv4, b=>x(3), c=>x(2), d=>x(1), e=>x(0), outp=>ism);
+ ismFSM: AND_5 port map (a=>inv4, b=>x(3), c=>x(2), d=>inv1, e=>x(0), outp=>ism);
 
  z<= (invr and isb and q(1) and q(0) );
 
