@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Thu Mar  8 20:32:38 2018
+Analysis & Synthesis Status : Successful - Fri Mar  9 15:12:24 2018
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : Stringreconize
-Top-level Entity Name : DUT
+Top-level Entity Name : TopLevel
 Family : MAX V
-Total logic elements : 50
-Total pins : 8
+Total logic elements : 84
+Total pins : 5
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

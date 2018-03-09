@@ -71,7 +71,7 @@ architecture Behave of Testbench is
 begin
   process 
     variable err_flag : boolean := false;
-    File INFILE: text open read_mode is "../../tracefile1.txt";
+    File INFILE: text open read_mode is "../../tracefile2.txt";
     FILE OUTFILE: text  open write_mode is "OUTPUTS.txt";
 
     ---------------------------------------------------

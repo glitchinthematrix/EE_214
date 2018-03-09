@@ -1,133 +1,49 @@
-# do Stringreconize_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do Stringreconize_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# vlib rtl_work
-# vmap work rtl_work
+# vlib gate_work
+# vmap work gate_work
 # Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
-# vmap work rtl_work 
+# vmap work gate_work 
 # Copying /home/glitchinthematrix/altera_lite/16.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/StringrecFSM.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity StringrecFSM
-# -- Compiling architecture Behave of StringrecFSM
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity AND_5
-# -- Compiling architecture Behave of AND_5
-# -- Compiling entity FSMTerror
-# -- Compiling architecture behave of FSMTerror
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/DUT.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/DUT.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity DUT
-# -- Compiling architecture DutWrap of DUT
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/DFF1.vhdl}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/DFF1.vhdl 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity DFF1
-# -- Compiling architecture WhatDoYouCare of DFF1
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMKnife.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity FSMKnife
-# -- Compiling architecture behave of FSMKnife
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/EE224_Components.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling package EE224_Components
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMgun.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMgun.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity FSMGun
-# -- Compiling architecture behave of FSMGun
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
-# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/FSMBomb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package EE224_Components
-# -- Compiling entity FSMBomb
-# -- Compiling architecture behave of FSMBomb
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# vlog -vlog01compat -work work +incdir+. {Stringreconize.vo}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 15:06:46 on Mar 09,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." Stringreconize.vo 
+# -- Compiling module DUT
+# 
+# Top level modules:
+# 	DUT
+# End time: 15:06:46 on Mar 09,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/glitchinthematrix/EE_214/FSM/Testbench.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 20:32:58 on Mar 08,2018
+# Start time: 15:06:46 on Mar 09,2018
 # vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/FSM/Testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 20:32:58 on Mar 08,2018, Elapsed time: 0:00:00
+# End time: 15:06:46 on Mar 09,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 20:32:58 on Mar 08,2018
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L maxv_ver -L gate_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L maxv_ver -L gate_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 15:06:46 on Mar 09,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.testbench(behave)
-# Loading work.dut(dutwrap)
-# Loading work.stringrecfsm(behave)
-# Loading work.fsmgun(behave)
-# Loading work.and_5(behave)
-# Loading work.dff1(whatdoyoucare)
-# Loading work.ee224_components
-# Loading work.fsmbomb(behave)
-# Loading work.fsmterror(behave)
-# Loading work.fsmknife(behave)
+# Loading work.DUT
+# Loading maxv_ver.maxv_io
+# Loading maxv_ver.maxv_lcell
+# Loading maxv_ver.maxv_asynch_lcell
+# Loading maxv_ver.maxv_lcell_register
 # 
 # add wave *
 # view structure
@@ -136,8 +52,8 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Note: SUCCESS, all tests passed.
-#    Time: 1090 ns  Iteration: 0  Instance: /testbench
+#    Time: 4840 ns  Iteration: 0  Instance: /testbench
 # 
 # stdin: <EOF>
-# End time: 20:34:36 on Mar 08,2018, Elapsed time: 0:01:38
+# End time: 15:07:04 on Mar 09,2018, Elapsed time: 0:00:18
 # Errors: 0, Warnings: 0

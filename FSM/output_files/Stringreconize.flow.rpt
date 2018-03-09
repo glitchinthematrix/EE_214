@@ -1,5 +1,5 @@
 Flow report for Stringreconize
-Thu Mar  8 20:32:44 2018
+Fri Mar  9 15:12:30 2018
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Thu Mar  8 20:32:44 2018       ;
+; Flow Status           ; Successful - Fri Mar  9 15:12:30 2018       ;
 ; Quartus Prime Version ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name         ; Stringreconize                              ;
-; Top-level Entity Name ; DUT                                         ;
+; Top-level Entity Name ; TopLevel                                    ;
 ; Family                ; MAX V                                       ;
-; Device                ; 5M1270ZF256C5                               ;
+; Device                ; 5M1270ZT144C5                               ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 50 / 1,270 ( 4 % )                          ;
-; Total pins            ; 8 / 211 ( 4 % )                             ;
+; Total logic elements  ; 84 / 1,270 ( 7 % )                          ;
+; Total pins            ; 5 / 114 ( 4 % )                             ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,7 +60,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/08/2018 20:32:24 ;
+; Start date & time ; 03/09/2018 15:12:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Stringreconize      ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ agreement for further details.
 +--------------------------------------+-----------------------------+----------------+-------------+----------------+
 ; Assignment Name                      ; Value                       ; Default Value  ; Entity Name ; Section Id     ;
 +--------------------------------------+-----------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 0.152052134410230           ; --             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 0.152058853106768           ; --             ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; dut_instance                ; --             ; --          ; Testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Testbench                   ; --             ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                 ; --             ; --          ; eda_simulation ;
@@ -85,7 +85,7 @@ agreement for further details.
 ; MIN_CORE_JUNCTION_TEMP               ; 0                           ; --             ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; No Heat Sink With Still Air ; --             ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                ; --             ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; DUT                         ; Stringreconize ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; TopLevel                    ; Stringreconize ; --          ; --             ;
 +--------------------------------------+-----------------------------+----------------+-------------+----------------+
 
 
@@ -94,12 +94,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 1233 MB             ; 00:00:36                           ;
-; Fitter                    ; 00:00:01     ; 1.0                     ; 1266 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 1039 MB             ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 1004 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1286 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 1216 MB             ; 00:00:32                           ;
+; Fitter                    ; 00:00:02     ; 1.0                     ; 1267 MB             ; 00:00:02                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 1038 MB             ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 1005 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 1285 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

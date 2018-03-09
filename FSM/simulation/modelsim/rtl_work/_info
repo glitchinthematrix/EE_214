@@ -21,9 +21,9 @@ VCYz:6IoJ[iP@UIz:R=f7G2
 !s100 f@24_LLPUiX9PBRI2SKQ;2
 Z6 OV;C;10.4d;61
 31
-Z7 !s110 1520521378
+Z7 !s110 1520583362
 !i10b 1
-Z8 !s108 1520521378.000000
+Z8 !s108 1520583362.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd|
 Z10 !s107 /home/glitchinthematrix/EE_214/FSM/FSMTerror.vhd|
 !i113 1
@@ -344,7 +344,7 @@ R43
 R11
 R12
 Etestbench
-Z44 w1520518934
+Z44 w1520583303
 R3
 R2
 R0
@@ -356,11 +356,11 @@ V@5iQ<LF@c19<e]mQMaJza0
 !s100 h`<<f5Y0?55R4a`U0c<TP2
 R6
 31
-R7
+Z47 !s110 1520583363
 !i10b 1
 R8
-Z47 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/Testbench.vhd|
-Z48 !s107 /home/glitchinthematrix/EE_214/FSM/Testbench.vhd|
+Z48 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/FSM/Testbench.vhd|
+Z49 !s107 /home/glitchinthematrix/EE_214/FSM/Testbench.vhd|
 !i113 1
 R11
 R12
@@ -370,15 +370,15 @@ R2
 DEx4 work 9 testbench 0 22 @5iQ<LF@c19<e]mQMaJza0
 l71
 L12
-VI;4::glZD5G^fO?QO[ECg1
-!s100 aL?_Xj=]SB2flHW_UVd@01
+VhkX>]=YNDa_kj_J91?ndG0
+!s100 19fgb>AN]l9d0]>`JV:H10
 R6
 31
-R7
+R47
 !i10b 1
 R8
-R47
 R48
+R49
 !i113 1
 R11
 R12

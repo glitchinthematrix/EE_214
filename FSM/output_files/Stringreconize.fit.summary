@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Mar  8 20:32:40 2018
+Fitter Status : Successful - Fri Mar  9 15:12:27 2018
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : Stringreconize
-Top-level Entity Name : DUT
+Top-level Entity Name : TopLevel
 Family : MAX V
-Device : 5M1270ZF256C5
+Device : 5M1270ZT144C5
 Timing Models : Final
-Total logic elements : 50 / 1,270 ( 4 % )
-Total pins : 8 / 211 ( 4 % )
+Total logic elements : 84 / 1,270 ( 7 % )
+Total pins : 5 / 114 ( 4 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

@@ -1,15 +1,147 @@
-|DUT
-input_vector[0] => StringrecFSM:dut.X[0]
-input_vector[1] => StringrecFSM:dut.X[1]
-input_vector[2] => StringrecFSM:dut.X[2]
-input_vector[3] => StringrecFSM:dut.X[3]
-input_vector[4] => StringrecFSM:dut.X[4]
-input_vector[5] => StringrecFSM:dut.X[5]
-input_vector[6] => StringrecFSM:dut.X[6]
-output_vector[0] << StringrecFSM:dut.Z
+|TopLevel
+TDI => Scan_Chain:scan_instance.TDI
+TDO << Scan_Chain:scan_instance.TDO
+TMS => Scan_Chain:scan_instance.TMS
+TCLK => Scan_Chain:scan_instance.TCLK
+TRST => Scan_Chain:scan_instance.TRST
 
 
-|DUT|StringrecFSM:dut
+|TopLevel|Scan_Chain:scan_instance
+TDI => Scan_reg:In_Reg.SI
+TDO <= Scan_reg:Out_Reg.SO
+TMS => L2_en.DATAB
+TMS => next_state.DATAB
+TMS => next_state.DATAB
+TMS => Selector2.IN2
+TMS => next_state.DATAB
+TMS => Selector3.IN1
+TMS => Selector0.IN1
+TMS => Selector1.IN1
+TCLK => Scan_reg:In_Reg.clock
+TCLK => Scan_reg:Out_Reg.clock
+TCLK => current_state~1.DATAIN
+TRST => Scan_reg:In_Reg.reset
+TRST => Scan_reg:Out_Reg.reset
+TRST => current_state~3.DATAIN
+TRST => L1_en.OUTPUTSELECT
+TRST => L2_en.OUTPUTSELECT
+TRST => cap_shft.OUTPUTSELECT
+TRST => next_state.s_idle.OUTPUTSELECT
+TRST => next_state.s_DR.OUTPUTSELECT
+TRST => next_state.s_capture.OUTPUTSELECT
+TRST => next_state.s_shift.OUTPUTSELECT
+TRST => next_state.s_update.OUTPUTSELECT
+TRST => Scan_reg:In_Reg.sel_reg
+TRST => Scan_reg:Out_Reg.sel_reg
+dut_in[0] <= Scan_reg:In_Reg.PO[0]
+dut_in[1] <= Scan_reg:In_Reg.PO[1]
+dut_in[2] <= Scan_reg:In_Reg.PO[2]
+dut_in[3] <= Scan_reg:In_Reg.PO[3]
+dut_in[4] <= Scan_reg:In_Reg.PO[4]
+dut_in[5] <= Scan_reg:In_Reg.PO[5]
+dut_in[6] <= Scan_reg:In_Reg.PO[6]
+dut_out[0] => Scan_reg:Out_Reg.PI[0]
+
+
+|TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg
+clock => L2[0].CLK
+clock => L2[1].CLK
+clock => L2[2].CLK
+clock => L2[3].CLK
+clock => L2[4].CLK
+clock => L2[5].CLK
+clock => L2[6].CLK
+clock => L1[0].CLK
+clock => L1[1].CLK
+clock => L1[2].CLK
+clock => L1[3].CLK
+clock => L1[4].CLK
+clock => L1[5].CLK
+clock => L1[6].CLK
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L1.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+PI[0] => mux1[0].DATAB
+PI[0] => mux2.DATAB
+PI[1] => mux1[1].DATAB
+PI[1] => mux2.DATAB
+PI[2] => mux1[2].DATAB
+PI[2] => mux2.DATAB
+PI[3] => mux1[3].DATAB
+PI[3] => mux2.DATAB
+PI[4] => mux1[4].DATAB
+PI[4] => mux2.DATAB
+PI[5] => mux1[5].DATAB
+PI[5] => mux2.DATAB
+PI[6] => mux1[6].DATAB
+PI[6] => mux2.DATAB
+PO[0] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[1] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[2] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[3] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[4] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[5] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+PO[6] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+SI => mux1[6].DATAA
+SO <= L1[0].DB_MAX_OUTPUT_PORT_TYPE
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L1_en => L1.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+cap_shft => mux1[6].OUTPUTSELECT
+cap_shft => mux1[5].OUTPUTSELECT
+cap_shft => mux1[4].OUTPUTSELECT
+cap_shft => mux1[3].OUTPUTSELECT
+cap_shft => mux1[2].OUTPUTSELECT
+cap_shft => mux1[1].OUTPUTSELECT
+cap_shft => mux1[0].OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+
+
+|TopLevel|Scan_Chain:scan_instance|Scan_Reg:Out_Reg
+clock => L2[0].CLK
+clock => L1[0].CLK
+reset => L1.OUTPUTSELECT
+reset => L2.OUTPUTSELECT
+PI[0] => mux1[0].DATAB
+PI[0] => mux2.DATAB
+PO[0] <= mux2.DB_MAX_OUTPUT_PORT_TYPE
+SI => mux1[0].DATAA
+SO <= L1[0].DB_MAX_OUTPUT_PORT_TYPE
+L1_en => L1.OUTPUTSELECT
+L2_en => L2.OUTPUTSELECT
+cap_shft => mux1[0].OUTPUTSELECT
+sel_reg => mux2.OUTPUTSELECT
+
+
+|TopLevel|StringrecFSM:dut
 X[0] => FSMGun:FSM1.x[0]
 X[0] => FSMBomb:FSM2.x[0]
 X[0] => FSMTerror:FSM3.x[0]
@@ -41,7 +173,7 @@ X[6] => FSMKnife:FSM4.x[6]
 Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMGun:FSM1
+|TopLevel|StringrecFSM:dut|FSMGun:FSM1
 x[0] => AND_5:isgFSM.e
 x[0] => AND_5:isuFSM.e
 x[0] => AND_5:isnFSM.e
@@ -67,7 +199,7 @@ x[6] => nq.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMGun:FSM1|AND_5:isgFSM
+|TopLevel|StringrecFSM:dut|FSMGun:FSM1|AND_5:isgFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -76,7 +208,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMGun:FSM1|AND_5:isuFSM
+|TopLevel|StringrecFSM:dut|FSMGun:FSM1|AND_5:isuFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -85,7 +217,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMGun:FSM1|AND_5:isnFSM
+|TopLevel|StringrecFSM:dut|FSMGun:FSM1|AND_5:isnFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -94,19 +226,19 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1
+|TopLevel|StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock1
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2
+|TopLevel|StringrecFSM:dut|FSMGun:FSM1|DFF1:DFFclock2
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMBomb:FSM2
+|TopLevel|StringrecFSM:dut|FSMBomb:FSM2
 x[0] => AND_5:isoFSM.e
 x[0] => AND_5:ismFSM.e
 x[0] => AND_5:isbFSM.e
@@ -135,7 +267,7 @@ x[6] => nq.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMBomb:FSM2|AND_5:isbFSM
+|TopLevel|StringrecFSM:dut|FSMBomb:FSM2|AND_5:isbFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -144,7 +276,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMBomb:FSM2|AND_5:isoFSM
+|TopLevel|StringrecFSM:dut|FSMBomb:FSM2|AND_5:isoFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -153,7 +285,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMBomb:FSM2|AND_5:ismFSM
+|TopLevel|StringrecFSM:dut|FSMBomb:FSM2|AND_5:ismFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -162,19 +294,19 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1
+|TopLevel|StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock1
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2
+|TopLevel|StringrecFSM:dut|FSMBomb:FSM2|DFF1:DFFclock2
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3
 x[0] => AND_5:isoFSM.e
 x[0] => AND_5:iseFSM.e
 x[0] => AND_5:istFSM.e
@@ -214,7 +346,7 @@ x[6] => nq.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3|AND_5:isoFSM
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3|AND_5:isoFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -223,7 +355,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3|AND_5:iseFSM
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3|AND_5:iseFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -232,7 +364,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3|AND_5:istFSM
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3|AND_5:istFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -241,7 +373,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3|AND_5:isrFSM
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3|AND_5:isrFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -250,25 +382,25 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock3
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock1
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2
+|TopLevel|StringrecFSM:dut|FSMTerror:FSM3|DFF1:DFFclock2
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4
 x[0] => AND_5:iskFSM.e
 x[0] => AND_5:isiFSM.e
 x[0] => AND_5:iseFSM.e
@@ -310,7 +442,7 @@ x[6] => nq.IN1
 z <= z.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|AND_5:iskFSM
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|AND_5:iskFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -319,7 +451,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|AND_5:isnFSM
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|AND_5:isnFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -328,7 +460,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|AND_5:isiFSM
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|AND_5:isiFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -337,7 +469,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|AND_5:isfFSM
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|AND_5:isfFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -346,7 +478,7 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|AND_5:iseFSM
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|AND_5:iseFSM
 a => outp.IN0
 b => outp.IN1
 c => outp.IN1
@@ -355,19 +487,19 @@ e => outp.IN1
 outp <= outp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock3
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock1
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|DUT|StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2
+|TopLevel|StringrecFSM:dut|FSMKnife:FSM4|DFF1:DFFclock2
 D => Q~reg0.DATAIN
 CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
