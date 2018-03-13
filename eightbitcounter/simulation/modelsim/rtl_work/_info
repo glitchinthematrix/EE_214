@@ -1,0 +1,423 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/glitchinthematrix/EE_214/eightbitcounter/simulation/modelsim
+Eand_2
+Z1 w1520656893
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/glitchinthematrix/EE_214/eightbitcounter/counter.vhd
+Z5 F/home/glitchinthematrix/EE_214/eightbitcounter/counter.vhd
+l0
+L38
+VQI]oLHj[7OjfOgWKR;[m;2
+!s100 OHhE?GTCV^Ak2S@QY<2cl0
+Z6 OV;C;10.4d;61
+31
+Z7 !s110 1520658311
+!i10b 1
+Z8 !s108 1520658311.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/eightbitcounter/counter.vhd|
+Z10 !s107 /home/glitchinthematrix/EE_214/eightbitcounter/counter.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Abehave
+R2
+R3
+DEx4 work 5 and_2 0 22 QI]oLHj[7OjfOgWKR;[m;2
+l43
+L42
+VcRHiMBkDee=8EV<F:<Tog3
+!s100 VOlLhQ<cM6_ZV1>Alm:Ed0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ecounter
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L108
+V98B;WCjXf_m4L5kC8o@3Q3
+!s100 jW7e[lgD4=?oDJbEdn<@<0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 7 counter 0 22 98B;WCjXf_m4L5kC8o@3Q3
+l119
+L112
+VGWOMmdadeJ[XX?zAgNE8b2
+!s100 [X4S]UPK3I^6lBUU9i]4J1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1520657919
+R2
+R3
+R0
+Z14 8/home/glitchinthematrix/EE_214/eightbitcounter/DUT.vhd
+Z15 F/home/glitchinthematrix/EE_214/eightbitcounter/DUT.vhd
+l0
+L10
+VZ?3db:P7Z2Hz;D]gmGaeK2
+!s100 :P7]JH0DEXkbTHlG2i8S50
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/eightbitcounter/DUT.vhd|
+Z17 !s107 /home/glitchinthematrix/EE_214/eightbitcounter/DUT.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 Z?3db:P7Z2Hz;D]gmGaeK2
+l21
+L15
+V1[Hc][V]_E:OC?l=eDX1H0
+!s100 EP`T48>?Eo`fV3CC4=B1m2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Pee224_components
+R2
+R3
+R1
+R0
+R4
+R5
+l0
+L7
+Vf]:4N9OdKofEZOQ>22L_D1
+!s100 f;;]jMk6kHEMFYhH:_g321
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eeightbitcounter
+Z18 w1520657627
+R2
+R3
+R0
+Z19 8/home/glitchinthematrix/EE_214/eightbitcounter/eightbitcounter.vhd
+Z20 F/home/glitchinthematrix/EE_214/eightbitcounter/eightbitcounter.vhd
+l0
+L7
+V10G@PQNGJJHkOBd^eKA]80
+!s100 G0M_?C5I@e5DLXmYPJ=hE2
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/eightbitcounter/eightbitcounter.vhd|
+Z22 !s107 /home/glitchinthematrix/EE_214/eightbitcounter/eightbitcounter.vhd|
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 15 eightbitcounter 0 22 10G@PQNGJJHkOBd^eKA]80
+l19
+L11
+V65LDC3V0:C]=Sf=<Moi=H0
+!s100 1:6;Bgb_UkXV;06LU@<m32
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Efullbitadder
+R1
+Z23 DPx4 work 16 ee224_components 0 22 f]:4N9OdKofEZOQ>22L_D1
+R2
+R3
+R0
+R4
+R5
+l0
+L88
+V_BdmWhIPjHP69gb^Whnd33
+!s100 EL2nZ?ke6_:13FP`U@^4N1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehave
+R23
+R2
+R3
+DEx4 work 12 fullbitadder 0 22 _BdmWhIPjHP69gb^Whnd33
+l94
+L92
+VScVWYcQ6>DAaj3`BRO_J11
+!s100 m1_VUC1OXb4DK]<D^YkjH1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Einverter
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L27
+VW8;4keO[6^2ogL@lRN^TN2
+!s100 FbATZPTnkE2=kXf_TXiGD1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 8 inverter 0 22 W8;4keO[6^2ogL@lRN^TN2
+l32
+L31
+V[?EMPPWiT^Fl3W4;d2=JP1
+!s100 ;XJhV`dY1<N2CLV[no0QT2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enand_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L60
+V^RoNT?bXNL3^ZNTA27YGH3
+!s100 IDI8mBb;9HhP5l[_gde>k3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 6 nand_2 0 22 ^RoNT?bXNL3^ZNTA27YGH3
+l65
+L64
+VD1@C8?MLaP@dU?BEzini12
+!s100 81iH0TW8aSXE8OEAiMlaP1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L49
+V;i`f5A33NTCa45`Ho2NG_2
+!s100 Ifl^;Nl8nb4]@nn4jU:RZ0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 4 or_2 0 22 ;i`f5A33NTCa45`Ho2NG_2
+l54
+L53
+VgFW[T3j^i>NKUU<gSPVKT1
+!s100 Ng7o>cSW^mbzE1SVJG;Po1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z24 w1520658238
+R3
+R2
+R0
+Z25 8/home/glitchinthematrix/EE_214/eightbitcounter/Testbench.vhd
+Z26 F/home/glitchinthematrix/EE_214/eightbitcounter/Testbench.vhd
+l0
+L10
+V@5iQ<LF@c19<e]mQMaJza0
+!s100 h`<<f5Y0?55R4a`U0c<TP2
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/eightbitcounter/Testbench.vhd|
+Z28 !s107 /home/glitchinthematrix/EE_214/eightbitcounter/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 @5iQ<LF@c19<e]mQMaJza0
+l44
+L12
+VXdZ`o[LJM0]EYOPNBD;I33
+!s100 X`C8oAD>FhGe_CQ4czK:b2
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Exor_2
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L71
+VBhj9NFNZEf075oNhNoBCQ0
+!s100 aYbUfMa9bA`Znl`LBOT]K3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 5 xor_2 0 22 Bhj9NFNZEf075oNhNoBCQ0
+l76
+L75
+VFRRdh3REYM3Y9bZ[6D0fC1
+!s100 B1gX?O:o[O_hLh1ijdXl>0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

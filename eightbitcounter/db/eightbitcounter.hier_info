@@ -1,0 +1,1438 @@
+|DUT
+input_vector[0] => eightbitcounter:dut.a[0]
+input_vector[1] => eightbitcounter:dut.a[1]
+input_vector[2] => eightbitcounter:dut.a[2]
+input_vector[3] => eightbitcounter:dut.a[3]
+input_vector[4] => eightbitcounter:dut.a[4]
+input_vector[5] => eightbitcounter:dut.a[5]
+input_vector[6] => eightbitcounter:dut.a[6]
+input_vector[7] => eightbitcounter:dut.a[7]
+output_vector[0] << eightbitcounter:dut.z[0]
+output_vector[1] << eightbitcounter:dut.z[1]
+output_vector[2] << eightbitcounter:dut.z[2]
+output_vector[3] << eightbitcounter:dut.z[3]
+
+
+|DUT|eightbitcounter:dut
+a[0] => counter:x_1.b
+a[1] => counter:x_2.b
+a[2] => counter:x_3.b
+a[3] => counter:x_4.b
+a[4] => counter:x_5.b
+a[5] => counter:x_6.b
+a[6] => counter:x_7.b
+a[7] => counter:x_8.b
+z[0] <= counter:x_8.z[0]
+z[1] <= counter:x_8.z[1]
+z[2] <= counter:x_8.z[2]
+z[3] <= counter:x_8.z[3]
+
+
+|DUT|eightbitcounter:dut|counter:x_1
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_1|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_2|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_3|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_4|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_5|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_6|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_7|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8
+x[0] => fullbitadder:x_1.a
+x[1] => fullbitadder:x_2.a
+x[2] => fullbitadder:x_3.a
+x[3] => fullbitadder:x_4.a
+b => fullbitadder:x_1.b
+z[0] <= fullbitadder:x_1.sum
+z[1] <= fullbitadder:x_2.sum
+z[2] <= fullbitadder:x_3.sum
+z[3] <= fullbitadder:x_4.sum
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_1
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_1|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_1|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_1|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_1|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_1|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_2
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_2|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_2|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_2|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_2|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_2|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_3
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_3|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_3|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_3|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_3|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_3|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_4
+a => XOR_2:x_1.a
+a => AND_2:x_3.a
+b => XOR_2:x_1.b
+b => AND_2:x_3.b
+cin => XOR_2:x_2.b
+cin => AND_2:x_4.b
+sum <= XOR_2:x_2.c
+cout <= OR_2:x_5.c
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_4|XOR_2:x_1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_4|XOR_2:x_2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_4|AND_2:x_3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_4|AND_2:x_4
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|eightbitcounter:dut|counter:x_8|fullbitadder:x_4|OR_2:x_5
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
