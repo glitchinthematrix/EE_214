@@ -1,0 +1,237 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFs|Q'
+Slack : -1.455
+TNS   : -2.672
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFa|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFe|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFi|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFc|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFg|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFk|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFm|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFp|Q'
+Slack : 0.568
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFf|Q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFl|Q'
+Slack : 0.819
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFb|Q'
+Slack : 0.824
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFj|Q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFn|Q'
+Slack : 0.863
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFo|Q'
+Slack : 0.863
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFd|Q'
+Slack : 1.270
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFq|Q'
+Slack : 1.336
+TNS   : 0.000
+
+Type  : Setup 'slow_clock:clock1|DFF1:DFFh|Q'
+Slack : 1.443
+TNS   : 0.000
+
+Type  : Setup 'x[1]'
+Slack : 1.703
+TNS   : 0.000
+
+Type  : Hold 'x[1]'
+Slack : -1.757
+TNS   : -1.757
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFh|Q'
+Slack : -1.497
+TNS   : -1.497
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFq|Q'
+Slack : -1.390
+TNS   : -1.390
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFd|Q'
+Slack : -1.324
+TNS   : -1.324
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFn|Q'
+Slack : -0.917
+TNS   : -0.917
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFo|Q'
+Slack : -0.917
+TNS   : -0.917
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFj|Q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFb|Q'
+Slack : -0.878
+TNS   : -0.878
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFl|Q'
+Slack : -0.873
+TNS   : -0.873
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFf|Q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFp|Q'
+Slack : -0.622
+TNS   : -0.622
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFc|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFg|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFk|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFm|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFa|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFe|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFi|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'slow_clock:clock1|DFF1:DFFs|Q'
+Slack : 1.078
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'x[1]'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFa|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFb|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFc|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFd|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFe|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFf|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFg|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFh|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFi|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFj|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFk|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFl|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFm|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFn|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFo|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFp|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFq|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFr|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'slow_clock:clock1|DFF1:DFFs|Q'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

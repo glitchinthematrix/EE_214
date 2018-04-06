@@ -1,0 +1,61 @@
+# do debouncer_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying /home/glitchinthematrix/altera_lite/16.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/debouncer/debouncerFSM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:46:18 on Mar 16,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/debouncer/debouncerFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity slow_clock
+# -- Compiling architecture Behave of slow_clock
+# -- Compiling entity debouncerFSM
+# -- Compiling architecture Behave of debouncerFSM
+# End time: 16:46:19 on Mar 16,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/debouncer/DFF2.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:46:19 on Mar 16,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/debouncer/DFF2.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DFF2
+# -- Compiling architecture WhatDoYouCare of DFF2
+# End time: 16:46:19 on Mar 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/glitchinthematrix/EE_214/debouncer/DFF1.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:46:19 on Mar 16,2018
+# vcom -reportprogress 300 -93 -work work /home/glitchinthematrix/EE_214/debouncer/DFF1.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DFF1
+# -- Compiling architecture WhatDoYouCare of DFF1
+# End time: 16:46:19 on Mar 16,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vsim work.debouncerfsm
+# vsim work.debouncerfsm 
+# Start time: 16:47:31 on Mar 16,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.debouncerfsm(behave)
+# Loading work.slow_clock(behave)
+# Loading work.dff1(whatdoyoucare)
+# Loading work.dff2(whatdoyoucare)
+# End time: 16:48:06 on Mar 16,2018, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 0

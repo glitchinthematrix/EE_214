@@ -1,0 +1,898 @@
+TimeQuest Timing Analyzer report for debouncer
+Fri Mar 16 17:01:28 2018
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'slow_clock:clock1|DFF1:DFFs|Q'
+ 12. Setup: 'slow_clock:clock1|DFF1:DFFa|Q'
+ 13. Setup: 'slow_clock:clock1|DFF1:DFFe|Q'
+ 14. Setup: 'slow_clock:clock1|DFF1:DFFi|Q'
+ 15. Setup: 'slow_clock:clock1|DFF1:DFFc|Q'
+ 16. Setup: 'slow_clock:clock1|DFF1:DFFg|Q'
+ 17. Setup: 'slow_clock:clock1|DFF1:DFFk|Q'
+ 18. Setup: 'slow_clock:clock1|DFF1:DFFm|Q'
+ 19. Setup: 'slow_clock:clock1|DFF1:DFFp|Q'
+ 20. Setup: 'slow_clock:clock1|DFF1:DFFf|Q'
+ 21. Setup: 'slow_clock:clock1|DFF1:DFFl|Q'
+ 22. Setup: 'slow_clock:clock1|DFF1:DFFb|Q'
+ 23. Setup: 'slow_clock:clock1|DFF1:DFFj|Q'
+ 24. Setup: 'slow_clock:clock1|DFF1:DFFn|Q'
+ 25. Setup: 'slow_clock:clock1|DFF1:DFFo|Q'
+ 26. Setup: 'slow_clock:clock1|DFF1:DFFd|Q'
+ 27. Setup: 'slow_clock:clock1|DFF1:DFFq|Q'
+ 28. Setup: 'slow_clock:clock1|DFF1:DFFh|Q'
+ 29. Setup: 'x[1]'
+ 30. Hold: 'x[1]'
+ 31. Hold: 'slow_clock:clock1|DFF1:DFFh|Q'
+ 32. Hold: 'slow_clock:clock1|DFF1:DFFq|Q'
+ 33. Hold: 'slow_clock:clock1|DFF1:DFFd|Q'
+ 34. Hold: 'slow_clock:clock1|DFF1:DFFn|Q'
+ 35. Hold: 'slow_clock:clock1|DFF1:DFFo|Q'
+ 36. Hold: 'slow_clock:clock1|DFF1:DFFj|Q'
+ 37. Hold: 'slow_clock:clock1|DFF1:DFFb|Q'
+ 38. Hold: 'slow_clock:clock1|DFF1:DFFl|Q'
+ 39. Hold: 'slow_clock:clock1|DFF1:DFFf|Q'
+ 40. Hold: 'slow_clock:clock1|DFF1:DFFp|Q'
+ 41. Hold: 'slow_clock:clock1|DFF1:DFFc|Q'
+ 42. Hold: 'slow_clock:clock1|DFF1:DFFg|Q'
+ 43. Hold: 'slow_clock:clock1|DFF1:DFFk|Q'
+ 44. Hold: 'slow_clock:clock1|DFF1:DFFm|Q'
+ 45. Hold: 'slow_clock:clock1|DFF1:DFFa|Q'
+ 46. Hold: 'slow_clock:clock1|DFF1:DFFe|Q'
+ 47. Hold: 'slow_clock:clock1|DFF1:DFFi|Q'
+ 48. Hold: 'slow_clock:clock1|DFF1:DFFs|Q'
+ 49. Setup Transfers
+ 50. Hold Transfers
+ 51. Report TCCS
+ 52. Report RSKM
+ 53. Unconstrained Paths Summary
+ 54. Clock Status Summary
+ 55. Unconstrained Input Ports
+ 56. Unconstrained Output Ports
+ 57. Unconstrained Input Ports
+ 58. Unconstrained Output Ports
+ 59. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; debouncer                                           ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M1270ZT144C5                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                       ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; Clock Name                    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                           ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+; slow_clock:clock1|DFF1:DFFa|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFa|Q } ;
+; slow_clock:clock1|DFF1:DFFb|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFb|Q } ;
+; slow_clock:clock1|DFF1:DFFc|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFc|Q } ;
+; slow_clock:clock1|DFF1:DFFd|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFd|Q } ;
+; slow_clock:clock1|DFF1:DFFe|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFe|Q } ;
+; slow_clock:clock1|DFF1:DFFf|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFf|Q } ;
+; slow_clock:clock1|DFF1:DFFg|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFg|Q } ;
+; slow_clock:clock1|DFF1:DFFh|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFh|Q } ;
+; slow_clock:clock1|DFF1:DFFi|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFi|Q } ;
+; slow_clock:clock1|DFF1:DFFj|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFj|Q } ;
+; slow_clock:clock1|DFF1:DFFk|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFk|Q } ;
+; slow_clock:clock1|DFF1:DFFl|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFl|Q } ;
+; slow_clock:clock1|DFF1:DFFm|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFm|Q } ;
+; slow_clock:clock1|DFF1:DFFn|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFn|Q } ;
+; slow_clock:clock1|DFF1:DFFo|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFo|Q } ;
+; slow_clock:clock1|DFF1:DFFp|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFp|Q } ;
+; slow_clock:clock1|DFF1:DFFq|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFq|Q } ;
+; slow_clock:clock1|DFF1:DFFr|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFr|Q } ;
+; slow_clock:clock1|DFF1:DFFs|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { slow_clock:clock1|DFF1:DFFs|Q } ;
+; x[1]                          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { x[1] }                          ;
++-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
+
+
++---------------------------------------------------------------------+
+; Fmax Summary                                                        ;
++------------+-----------------+-------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                    ; Note ;
++------------+-----------------+-------------------------------+------+
+; 407.33 MHz ; 407.33 MHz      ; slow_clock:clock1|DFF1:DFFs|Q ;      ;
++------------+-----------------+-------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------------+
+; Setup Summary                                          ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; slow_clock:clock1|DFF1:DFFs|Q ; -1.455 ; -2.672        ;
+; slow_clock:clock1|DFF1:DFFa|Q ; 0.466  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFe|Q ; 0.466  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFi|Q ; 0.466  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFc|Q ; 0.467  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFg|Q ; 0.467  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFk|Q ; 0.467  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFm|Q ; 0.467  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFp|Q ; 0.568  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFf|Q ; 0.808  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFl|Q ; 0.819  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFb|Q ; 0.824  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFj|Q ; 0.825  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFn|Q ; 0.863  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFo|Q ; 0.863  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFd|Q ; 1.270  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFq|Q ; 1.336  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFh|Q ; 1.443  ; 0.000         ;
+; x[1]                          ; 1.703  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Hold Summary                                           ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; x[1]                          ; -1.757 ; -1.757        ;
+; slow_clock:clock1|DFF1:DFFh|Q ; -1.497 ; -1.497        ;
+; slow_clock:clock1|DFF1:DFFq|Q ; -1.390 ; -1.390        ;
+; slow_clock:clock1|DFF1:DFFd|Q ; -1.324 ; -1.324        ;
+; slow_clock:clock1|DFF1:DFFn|Q ; -0.917 ; -0.917        ;
+; slow_clock:clock1|DFF1:DFFo|Q ; -0.917 ; -0.917        ;
+; slow_clock:clock1|DFF1:DFFj|Q ; -0.879 ; -0.879        ;
+; slow_clock:clock1|DFF1:DFFb|Q ; -0.878 ; -0.878        ;
+; slow_clock:clock1|DFF1:DFFl|Q ; -0.873 ; -0.873        ;
+; slow_clock:clock1|DFF1:DFFf|Q ; -0.862 ; -0.862        ;
+; slow_clock:clock1|DFF1:DFFp|Q ; -0.622 ; -0.622        ;
+; slow_clock:clock1|DFF1:DFFc|Q ; -0.521 ; -0.521        ;
+; slow_clock:clock1|DFF1:DFFg|Q ; -0.521 ; -0.521        ;
+; slow_clock:clock1|DFF1:DFFk|Q ; -0.521 ; -0.521        ;
+; slow_clock:clock1|DFF1:DFFm|Q ; -0.521 ; -0.521        ;
+; slow_clock:clock1|DFF1:DFFa|Q ; -0.520 ; -0.520        ;
+; slow_clock:clock1|DFF1:DFFe|Q ; -0.520 ; -0.520        ;
+; slow_clock:clock1|DFF1:DFFi|Q ; -0.520 ; -0.520        ;
+; slow_clock:clock1|DFF1:DFFs|Q ; 1.078  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------------------------------+
+; Minimum Pulse Width Summary                            ;
++-------------------------------+--------+---------------+
+; Clock                         ; Slack  ; End Point TNS ;
++-------------------------------+--------+---------------+
+; x[1]                          ; -2.289 ; -2.289        ;
+; slow_clock:clock1|DFF1:DFFa|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFb|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFc|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFd|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFe|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFf|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFg|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFh|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFi|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFj|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFk|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFl|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFm|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFn|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFo|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFp|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFq|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFr|Q ; 0.234  ; 0.000         ;
+; slow_clock:clock1|DFF1:DFFs|Q ; 0.234  ; 0.000         ;
++-------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFs|Q'                                                                                                                ;
++--------+------------------+------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node          ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -1.455 ; DFF2:DFFclock1|Q ; DFF2:DFFclock2|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 1.000        ; 0.000      ; 2.122      ;
+; -1.217 ; DFF2:DFFclock2|Q ; DFF2:DFFclock1|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 1.000        ; 0.000      ; 1.884      ;
+; -1.215 ; DFF2:DFFclock2|Q ; DFF2:DFFclock2|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 1.000        ; 0.000      ; 1.882      ;
+; -0.632 ; DFF2:DFFclock1|Q ; DFF2:DFFclock1|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 1.000        ; 0.000      ; 1.299      ;
++--------+------------------+------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFa|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.466 ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFa|Q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFa|Q ; 1.000        ; 1.784      ; 1.861      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFe|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.466 ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFe|Q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFe|Q ; 1.000        ; 1.784      ; 1.861      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFi|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.466 ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFi|Q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFi|Q ; 1.000        ; 1.784      ; 1.861      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFc|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.467 ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFc|Q ; 0.500        ; 1.784      ; 1.860      ;
+; 0.967 ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFc|Q ; 1.000        ; 1.784      ; 1.860      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFg|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.467 ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFg|Q ; 0.500        ; 1.784      ; 1.860      ;
+; 0.967 ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFg|Q ; 1.000        ; 1.784      ; 1.860      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFk|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.467 ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFk|Q ; 0.500        ; 1.785      ; 1.861      ;
+; 0.967 ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFk|Q ; 1.000        ; 1.785      ; 1.861      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFm|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.467 ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFm|Q ; 0.500        ; 1.785      ; 1.861      ;
+; 0.967 ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFm|Q ; 1.000        ; 1.785      ; 1.861      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFp|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.568 ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFp|Q ; 0.500        ; 2.144      ; 2.119      ;
+; 1.068 ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFp|Q ; 1.000        ; 2.144      ; 2.119      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFf|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.808 ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFf|Q ; 0.500        ; 2.144      ; 1.879      ;
+; 1.308 ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFf|Q ; 1.000        ; 2.144      ; 1.879      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFl|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.819 ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFl|Q ; 0.500        ; 2.154      ; 1.878      ;
+; 1.319 ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFl|Q ; 1.000        ; 2.154      ; 1.878      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFb|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.824 ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFb|Q ; 0.500        ; 2.160      ; 1.879      ;
+; 1.324 ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFb|Q ; 1.000        ; 2.160      ; 1.879      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFj|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.825 ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFj|Q ; 0.500        ; 2.160      ; 1.878      ;
+; 1.325 ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFj|Q ; 1.000        ; 2.160      ; 1.878      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFn|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.863 ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFn|Q ; 0.500        ; 2.181      ; 1.861      ;
+; 1.363 ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFn|Q ; 1.000        ; 2.181      ; 1.861      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFo|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 0.863 ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFo|Q ; 0.500        ; 2.181      ; 1.861      ;
+; 1.363 ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFo|Q ; 1.000        ; 2.181      ; 1.861      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFd|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 1.270 ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFd|Q ; 0.500        ; 2.865      ; 2.138      ;
+; 1.770 ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFd|Q ; 1.000        ; 2.865      ; 2.138      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFq|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 1.336 ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFq|Q ; 0.500        ; 2.931      ; 2.138      ;
+; 1.836 ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFq|Q ; 1.000        ; 2.931      ; 2.138      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'slow_clock:clock1|DFF1:DFFh|Q'                                                                                                                                         ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 1.443 ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFh|Q ; 0.500        ; 3.038      ; 2.138      ;
+; 1.943 ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFh|Q ; 1.000        ; 3.038      ; 2.138      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'x[1]'                                                                                                                                                ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; 1.703 ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; x[1]        ; 0.500        ; 3.298      ; 2.138      ;
+; 2.203 ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; x[1]        ; 1.000        ; 3.298      ; 2.138      ;
++-------+-------------------------------+-------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'x[1]'                                                                                                                                                  ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------+--------------+------------+------------+
+; -1.757 ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; x[1]        ; 0.000        ; 3.298      ; 2.138      ;
+; -1.257 ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; x[1]        ; -0.500       ; 3.298      ; 2.138      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFh|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -1.497 ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFh|Q ; 0.000        ; 3.038      ; 2.138      ;
+; -0.997 ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFh|Q ; -0.500       ; 3.038      ; 2.138      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFq|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -1.390 ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFq|Q ; 0.000        ; 2.931      ; 2.138      ;
+; -0.890 ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFq|Q ; -0.500       ; 2.931      ; 2.138      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFd|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -1.324 ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFd|Q ; 0.000        ; 2.865      ; 2.138      ;
+; -0.824 ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFd|Q ; -0.500       ; 2.865      ; 2.138      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFn|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.917 ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFn|Q ; 0.000        ; 2.181      ; 1.861      ;
+; -0.417 ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFn|Q ; -0.500       ; 2.181      ; 1.861      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFo|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.917 ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFo|Q ; 0.000        ; 2.181      ; 1.861      ;
+; -0.417 ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFo|Q ; -0.500       ; 2.181      ; 1.861      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFj|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.879 ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFj|Q ; 0.000        ; 2.160      ; 1.878      ;
+; -0.379 ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFj|Q ; -0.500       ; 2.160      ; 1.878      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFb|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.878 ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFb|Q ; 0.000        ; 2.160      ; 1.879      ;
+; -0.378 ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFb|Q ; -0.500       ; 2.160      ; 1.879      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFl|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.873 ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFl|Q ; 0.000        ; 2.154      ; 1.878      ;
+; -0.373 ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFl|Q ; -0.500       ; 2.154      ; 1.878      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFf|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.862 ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFf|Q ; 0.000        ; 2.144      ; 1.879      ;
+; -0.362 ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFf|Q ; -0.500       ; 2.144      ; 1.879      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFp|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.622 ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFp|Q ; 0.000        ; 2.144      ; 2.119      ;
+; -0.122 ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFp|Q ; -0.500       ; 2.144      ; 2.119      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFc|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.521 ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFc|Q ; 0.000        ; 1.784      ; 1.860      ;
+; -0.021 ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFc|Q ; -0.500       ; 1.784      ; 1.860      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFg|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.521 ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFg|Q ; 0.000        ; 1.784      ; 1.860      ;
+; -0.021 ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFg|Q ; -0.500       ; 1.784      ; 1.860      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFk|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.521 ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFk|Q ; 0.000        ; 1.785      ; 1.861      ;
+; -0.021 ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFk|Q ; -0.500       ; 1.785      ; 1.861      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFm|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.521 ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFm|Q ; 0.000        ; 1.785      ; 1.861      ;
+; -0.021 ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFm|Q ; -0.500       ; 1.785      ; 1.861      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFa|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.520 ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFa|Q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFa|Q ; -0.500       ; 1.784      ; 1.861      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFe|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.520 ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFe|Q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFe|Q ; -0.500       ; 1.784      ; 1.861      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFi|Q'                                                                                                                                           ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; -0.520 ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFi|Q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFi|Q ; -0.500       ; 1.784      ; 1.861      ;
++--------+-------------------------------+-------------------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'slow_clock:clock1|DFF1:DFFs|Q'                                                                                                                ;
++-------+------------------+------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock                  ; Latch Clock                   ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+; 1.078 ; DFF2:DFFclock1|Q ; DFF2:DFFclock1|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 0.000        ; 0.000      ; 1.299      ;
+; 1.661 ; DFF2:DFFclock2|Q ; DFF2:DFFclock2|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 0.000        ; 0.000      ; 1.882      ;
+; 1.663 ; DFF2:DFFclock2|Q ; DFF2:DFFclock1|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 0.000        ; 0.000      ; 1.884      ;
+; 1.901 ; DFF2:DFFclock1|Q ; DFF2:DFFclock2|Q ; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 0.000        ; 0.000      ; 2.122      ;
++-------+------------------+------------------+-------------------------------+-------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                           ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFa|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFb|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFc|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFd|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFe|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFf|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFg|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFh|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFi|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFj|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFk|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFl|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFm|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFn|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFo|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFp|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFq|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 4        ; 0        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFa|Q ; x[1]                          ; 1        ; 1        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                            ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFa|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFb|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFc|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFd|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFe|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFf|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFg|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFh|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFi|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFj|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFk|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFl|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFm|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFn|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFo|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFp|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFq|Q ; 1        ; 1        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; 4        ; 0        ; 0        ; 0        ;
+; slow_clock:clock1|DFF1:DFFa|Q ; x[1]                          ; 1        ; 1        ; 0        ; 0        ;
++-------------------------------+-------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 25    ; 25   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------------------+
+; Clock Status Summary                                                               ;
++-------------------------------+-------------------------------+------+-------------+
+; Target                        ; Clock                         ; Type ; Status      ;
++-------------------------------+-------------------------------+------+-------------+
+; slow_clock:clock1|DFF1:DFFa|Q ; slow_clock:clock1|DFF1:DFFa|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFb|Q ; slow_clock:clock1|DFF1:DFFb|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFc|Q ; slow_clock:clock1|DFF1:DFFc|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFd|Q ; slow_clock:clock1|DFF1:DFFd|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFe|Q ; slow_clock:clock1|DFF1:DFFe|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFf|Q ; slow_clock:clock1|DFF1:DFFf|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFg|Q ; slow_clock:clock1|DFF1:DFFg|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFh|Q ; slow_clock:clock1|DFF1:DFFh|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFi|Q ; slow_clock:clock1|DFF1:DFFi|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFj|Q ; slow_clock:clock1|DFF1:DFFj|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFk|Q ; slow_clock:clock1|DFF1:DFFk|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFl|Q ; slow_clock:clock1|DFF1:DFFl|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFm|Q ; slow_clock:clock1|DFF1:DFFm|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFn|Q ; slow_clock:clock1|DFF1:DFFn|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFo|Q ; slow_clock:clock1|DFF1:DFFo|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFp|Q ; slow_clock:clock1|DFF1:DFFp|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFq|Q ; slow_clock:clock1|DFF1:DFFq|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFr|Q ; slow_clock:clock1|DFF1:DFFr|Q ; Base ; Constrained ;
+; slow_clock:clock1|DFF1:DFFs|Q ; slow_clock:clock1|DFF1:DFFs|Q ; Base ; Constrained ;
+; x[1]                          ; x[1]                          ; Base ; Constrained ;
++-------------------------------+-------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; x[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; z           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; x[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; z           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Fri Mar 16 17:01:28 2018
+Info: Command: quartus_sta debouncer -c debouncer
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'debouncer.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFs|Q slow_clock:clock1|DFF1:DFFs|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFr|Q slow_clock:clock1|DFF1:DFFr|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFq|Q slow_clock:clock1|DFF1:DFFq|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFp|Q slow_clock:clock1|DFF1:DFFp|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFo|Q slow_clock:clock1|DFF1:DFFo|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFn|Q slow_clock:clock1|DFF1:DFFn|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFm|Q slow_clock:clock1|DFF1:DFFm|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFl|Q slow_clock:clock1|DFF1:DFFl|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFk|Q slow_clock:clock1|DFF1:DFFk|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFj|Q slow_clock:clock1|DFF1:DFFj|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFi|Q slow_clock:clock1|DFF1:DFFi|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFh|Q slow_clock:clock1|DFF1:DFFh|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFg|Q slow_clock:clock1|DFF1:DFFg|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFf|Q slow_clock:clock1|DFF1:DFFf|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFe|Q slow_clock:clock1|DFF1:DFFe|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFd|Q slow_clock:clock1|DFF1:DFFd|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFc|Q slow_clock:clock1|DFF1:DFFc|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFb|Q slow_clock:clock1|DFF1:DFFb|Q
+    Info (332105): create_clock -period 1.000 -name slow_clock:clock1|DFF1:DFFa|Q slow_clock:clock1|DFF1:DFFa|Q
+    Info (332105): create_clock -period 1.000 -name x[1] x[1]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.455
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.455              -2.672 slow_clock:clock1|DFF1:DFFs|Q 
+    Info (332119):     0.466               0.000 slow_clock:clock1|DFF1:DFFa|Q 
+    Info (332119):     0.466               0.000 slow_clock:clock1|DFF1:DFFe|Q 
+    Info (332119):     0.466               0.000 slow_clock:clock1|DFF1:DFFi|Q 
+    Info (332119):     0.467               0.000 slow_clock:clock1|DFF1:DFFc|Q 
+    Info (332119):     0.467               0.000 slow_clock:clock1|DFF1:DFFg|Q 
+    Info (332119):     0.467               0.000 slow_clock:clock1|DFF1:DFFk|Q 
+    Info (332119):     0.467               0.000 slow_clock:clock1|DFF1:DFFm|Q 
+    Info (332119):     0.568               0.000 slow_clock:clock1|DFF1:DFFp|Q 
+    Info (332119):     0.808               0.000 slow_clock:clock1|DFF1:DFFf|Q 
+    Info (332119):     0.819               0.000 slow_clock:clock1|DFF1:DFFl|Q 
+    Info (332119):     0.824               0.000 slow_clock:clock1|DFF1:DFFb|Q 
+    Info (332119):     0.825               0.000 slow_clock:clock1|DFF1:DFFj|Q 
+    Info (332119):     0.863               0.000 slow_clock:clock1|DFF1:DFFn|Q 
+    Info (332119):     0.863               0.000 slow_clock:clock1|DFF1:DFFo|Q 
+    Info (332119):     1.270               0.000 slow_clock:clock1|DFF1:DFFd|Q 
+    Info (332119):     1.336               0.000 slow_clock:clock1|DFF1:DFFq|Q 
+    Info (332119):     1.443               0.000 slow_clock:clock1|DFF1:DFFh|Q 
+    Info (332119):     1.703               0.000 x[1] 
+Info (332146): Worst-case hold slack is -1.757
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.757              -1.757 x[1] 
+    Info (332119):    -1.497              -1.497 slow_clock:clock1|DFF1:DFFh|Q 
+    Info (332119):    -1.390              -1.390 slow_clock:clock1|DFF1:DFFq|Q 
+    Info (332119):    -1.324              -1.324 slow_clock:clock1|DFF1:DFFd|Q 
+    Info (332119):    -0.917              -0.917 slow_clock:clock1|DFF1:DFFn|Q 
+    Info (332119):    -0.917              -0.917 slow_clock:clock1|DFF1:DFFo|Q 
+    Info (332119):    -0.879              -0.879 slow_clock:clock1|DFF1:DFFj|Q 
+    Info (332119):    -0.878              -0.878 slow_clock:clock1|DFF1:DFFb|Q 
+    Info (332119):    -0.873              -0.873 slow_clock:clock1|DFF1:DFFl|Q 
+    Info (332119):    -0.862              -0.862 slow_clock:clock1|DFF1:DFFf|Q 
+    Info (332119):    -0.622              -0.622 slow_clock:clock1|DFF1:DFFp|Q 
+    Info (332119):    -0.521              -0.521 slow_clock:clock1|DFF1:DFFc|Q 
+    Info (332119):    -0.521              -0.521 slow_clock:clock1|DFF1:DFFg|Q 
+    Info (332119):    -0.521              -0.521 slow_clock:clock1|DFF1:DFFk|Q 
+    Info (332119):    -0.521              -0.521 slow_clock:clock1|DFF1:DFFm|Q 
+    Info (332119):    -0.520              -0.520 slow_clock:clock1|DFF1:DFFa|Q 
+    Info (332119):    -0.520              -0.520 slow_clock:clock1|DFF1:DFFe|Q 
+    Info (332119):    -0.520              -0.520 slow_clock:clock1|DFF1:DFFi|Q 
+    Info (332119):     1.078               0.000 slow_clock:clock1|DFF1:DFFs|Q 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 x[1] 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFa|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFb|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFc|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFd|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFe|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFf|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFg|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFh|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFi|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFj|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFk|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFl|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFm|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFn|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFo|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFp|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFq|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFr|Q 
+    Info (332119):     0.234               0.000 slow_clock:clock1|DFF1:DFFs|Q 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1005 megabytes
+    Info: Processing ended: Fri Mar 16 17:01:28 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,77 @@
+library std;
+use std.standard.all;
+
+ibrary ieee;
+use ieee.std_logic_1164.all;
+entity slow_clock is
+  port (x,y in std_logic;
+         z: out std_logic);
+end entity slow_clock;
+
+architecture Behave of slow_clock is
+component DFF1 is
+	port (RESET, CLK: in std_logic; Q: out std_logic);
+ end component;	
+signal q(18 downto 0): std_logic;
+begin
+  DFFa: DFF1 port map (CLK=>x,RESET=>y, Q=>q(0));
+  DFFb: DFF1 port map (CLK=>q(0), RESET=>y; Q=>q(1));
+  DFFc: DFF1 port map (CLK=>q(1), RESET=>y; Q=>q(2));
+  DFFd: DFF1 port map (CLK=>q(2), RESET=>y; Q=>q(3));
+  DFFe: DFF1 port map (CLK=>q(3), RESET=>y; Q=>q(4));
+  DFFf: DFF1 port map (CLK=>q(4), RESET=>y; Q=>q(5));
+  DFFg: DFF1 port map (CLK=>q(5), RESET=>y; Q=>q(6));
+  DFFh: DFF1 port map (CLK=>q(6), RESET=>y; Q=>q(7));
+  DFFi: DFF1 port map (CLK=>q(7), RESET=>y; Q=>q(8));
+  DFFj: DFF1 port map (CLK=>q(8), RESET=>y; Q=>q(9));
+  DFFk: DFF1 port map (CLK=>q(9), RESET=>y; Q=>q(10));
+  DFFl: DFF1 port map (CLK=>q(10), RESET=>y; Q=>q(11));
+  DFFm: DFF1 port map (CLK=>q(11), RESET=>y; Q=>q(12));
+  DFFn: DFF1 port map (CLK=>q(12), RESET=>y; Q=>q(13));
+  DFFo: DFF1 port map (CLK=>q(13), RESET=>y; Q=>q(14));
+  DFFp: DFF1 port map (CLK=>q(14), RESET=>y; Q=>q(15));
+  DFFq: DFF1 port map (CLK=>q(15), RESET=>y; Q=>q(16));
+  DFFr: DFF1 port map (CLK=>q(16), RESET=>y; Q=>q(17));
+  DFFs: DFF1 port map (CLK=>q(17), RESET=>y; Q=>z);
+end Behave;
+
+library ieee;
+use ieee.std_logic_1164.all;
+entity debouncerFSM is
+port(x:in std_logic_vector(2 downto 0); z:out std_logic);
+end entity;
+
+architecture Behave of debouncerFSM is
+component slow_clock is
+  port (x,y in std_logic;
+         z: out std_logic);
+end component slow_clock;
+component DFF2 is
+	port (D, CLK: in std_logic; Q: out std_logic);
+ end component; 
+signal invq0, invq1, invx, slowclockoutput: std_logic;
+signal q: std_logic_vector(1 downto 0);
+signal nq: std_logic_vector( 1 downto 0);
+
+begin
+
+
+invx<= not(x(0));
+invq0<=not(q(0));
+invq1<=not(q(1));
+invr<=not(x(2));
+
+z<= (invr and (invq1 and q(0) and x(0)) or (invq0 and q(1) and invx));
+
+nq(1)<= z;
+
+nq(0)<= (invr and(invq1 and invq0 and x(0)) or (q(1) and invq0 and invx));
+
+clock1: slow_clock port map (x=>x(1), y=>x(2), z=>slowclockoutput);
+
+DFFclock1: DFF2 port map ( D=>nq(1), CLK=>slowclockoutput, Q=>q(1));
+
+DFFclock2: DFF2 port map ( D=>nq(0), CLK=>slowclockoutput, Q=>q(0));
+
+end Behave;
+

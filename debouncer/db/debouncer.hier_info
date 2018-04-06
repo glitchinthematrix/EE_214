@@ -1,0 +1,184 @@
+|debouncerFSM
+x[0] => z.IN1
+x[0] => nq.IN1
+x[0] => nq.IN1
+x[0] => z.IN1
+x[0] => nq.IN1
+x[0] => nq.IN1
+x[1] => slow_clock:clock1.x
+x[2] => slow_clock:clock1.y
+x[2] => z.IN1
+x[2] => nq[1].IN1
+x[2] => nq[0].IN1
+z << z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1
+x => DFF1:DFFa.CLK
+y => DFF1:DFFa.RESET
+y => DFF1:DFFb.RESET
+y => DFF1:DFFc.RESET
+y => DFF1:DFFd.RESET
+y => DFF1:DFFe.RESET
+y => DFF1:DFFf.RESET
+y => DFF1:DFFg.RESET
+y => DFF1:DFFh.RESET
+y => DFF1:DFFi.RESET
+y => DFF1:DFFj.RESET
+y => DFF1:DFFk.RESET
+y => DFF1:DFFl.RESET
+y => DFF1:DFFm.RESET
+y => DFF1:DFFn.RESET
+y => DFF1:DFFo.RESET
+y => DFF1:DFFp.RESET
+y => DFF1:DFFq.RESET
+y => DFF1:DFFr.RESET
+y => DFF1:DFFs.RESET
+z <= DFF1:DFFs.Q
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFa
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFb
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFc
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFd
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFe
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFf
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFg
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFh
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFi
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFj
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFk
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFl
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFm
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFn
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFo
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFp
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFq
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFr
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|slow_clock:clock1|DFF1:DFFs
+D => Q~reg0.DATAIN
+RESET => Q~reg0.ACLR
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|DFF2:DFFclock1
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|debouncerFSM|DFF2:DFFclock2
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/glitchinthematrix/EE_214/debouncer/simulation/modelsim
+Edebouncerfsm
+Z1 w1521198906
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/glitchinthematrix/EE_214/debouncer/debouncerFSM.vhd
+Z5 F/home/glitchinthematrix/EE_214/debouncer/debouncerFSM.vhd
+l0
+L60
+VV^TO>Ym?h0:98Sc7PI:Z91
+!s100 Dl1d2`WI5^@iEGN:d65Fd0
+Z6 OV;C;10.4d;61
+31
+Z7 !s110 1521198979
+!i10b 1
+Z8 !s108 1521198978.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/debouncer/debouncerFSM.vhd|
+Z10 !s107 /home/glitchinthematrix/EE_214/debouncer/debouncerFSM.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Abehave
+R2
+R3
+DEx4 work 12 debouncerfsm 0 22 V^TO>Ym?h0:98Sc7PI:Z91
+l76
+L64
+VAZm@jL`]`[he8afH7Yn8X0
+!s100 eiT^d2BB52znzWOgl2hG:3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edff1
+Z13 w1521198914
+R2
+R3
+R0
+Z14 8/home/glitchinthematrix/EE_214/debouncer/DFF1.vhdl
+Z15 F/home/glitchinthematrix/EE_214/debouncer/DFF1.vhdl
+l0
+L11
+VKlWTiA?hVE?k]k_=];INH3
+!s100 4hSSSDKe?H<A<hV>0[T;C0
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1521198979.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/debouncer/DFF1.vhdl|
+Z18 !s107 /home/glitchinthematrix/EE_214/debouncer/DFF1.vhdl|
+!i113 1
+R11
+R12
+Awhatdoyoucare
+R2
+R3
+DEx4 work 4 dff1 0 22 KlWTiA?hVE?k]k_=];INH3
+l16
+L15
+VDz2MXl>FeUS]JHSiWGClV3
+!s100 K`0hGhz:gUa<zJZhzSE:80
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Edff2
+Z19 w1521197244
+R2
+R3
+R0
+Z20 8/home/glitchinthematrix/EE_214/debouncer/DFF2.vhdl
+Z21 F/home/glitchinthematrix/EE_214/debouncer/DFF2.vhdl
+l0
+L11
+VG7d6n^fcXbQKGG7`68KYL0
+!s100 bST]TeLLWmgo59Jd5QJWT2
+R6
+31
+R7
+!i10b 1
+R16
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/glitchinthematrix/EE_214/debouncer/DFF2.vhdl|
+Z23 !s107 /home/glitchinthematrix/EE_214/debouncer/DFF2.vhdl|
+!i113 1
+R11
+R12
+Awhatdoyoucare
+R2
+R3
+DEx4 work 4 dff2 0 22 G7d6n^fcXbQKGG7`68KYL0
+l16
+L15
+V=5FSAVFTkdOQn<[lZQ0^90
+!s100 X>K?_c<1bWGo;J:PlXOhf2
+R6
+31
+R7
+!i10b 1
+R16
+R22
+R23
+!i113 1
+R11
+R12
+Eslow_clock
+R1
+R2
+R3
+R0
+R4
+R5
+l0
+L6
+VInbCZ0TgK>C>?TkzO<m142
+!s100 WLol?ZPgYY2<HKSXHPPP^2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehave
+R2
+R3
+DEx4 work 10 slow_clock 0 22 InbCZ0TgK>C>?TkzO<m142
+l17
+L11
+V_cY:4Y<idU?RD_Y^ai;XQ0
+!s100 Ge2HWmd`A5=X@^M@N6=c?1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
