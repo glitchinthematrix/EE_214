@@ -16,7 +16,10 @@ constant 1k: unsigned (9 downto 0):='1111101000';
 begin
 process(reset,clk, react,countin)
 begin
-if (reset='1') then
+//rest state indicator from total_time_clock. Starts only when start pressed and starts counting. 
+
+
+//if (reset='1') then
     LED_on<= '0';
     cnt<=0;
     cnt2<=0;
@@ -39,7 +42,7 @@ elsif (clk’event and (clk='1') and freeze_state = '0') then
             freeze_state<= '1';
         end if;
         
-end if;
+end if;//
 end process;
 
 end architecture Behave;
