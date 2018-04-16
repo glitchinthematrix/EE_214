@@ -5,7 +5,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 entity LED_clock is
-port(reset,clk,react,start,timer_in_rest: in std_logic ; countin: in unsigned (10 downto 0); LED_on, rest_indicator, early_press_indicator,LED_state: out std_logic);
+port(reset,clk,react,start,timer_in_rest: in std_logic ; countin: in unsigned (10 downto 0); LED_on, rest_indicator, early_press_indicator: out std_logic);
 end entity LED_clock;
 architecture Behave of LED_clock is 
 signal  cnt  : unsigned (15 downto 0);
@@ -20,7 +20,7 @@ process(reset,clk, react, countin, start, freeze_state,timer_in_rest)
 variable next_rtl_state: RtlState;
 variable cnt_var:  unsigned (15 downto 0);
 variable cnt2_var: unsigned (10 downto 0);
-variable freeze_state_var, rest_indicator_var, early_press_indicator_var, LED_on_var,LED_state_var: std_logic;
+variable freeze_state_var, rest_indicator_var, early_press_indicator_var, LED_on_var: std_logic;
 
 begin
 next_rtl_state := rtl_state;
@@ -37,7 +37,6 @@ case rtl_state is
             cnt2_var:="00000000000";
             freeze_state_var := '0';
             LED_on_var :='0';
-            LED_state_var:='0';
             if (start = '1') then
                 freeze_state_var:= '0';
                 rest_indicator_var:='0';
@@ -47,7 +46,7 @@ case rtl_state is
 
 
         when working=>
-            LED_state_var:='1';
+     
             if (timer_in_rest ='1') then
                 rest_indicator_var := '1';
                 next_rtl_state := rest;
@@ -58,11 +57,11 @@ case rtl_state is
                 cnt2_var:="00000000000"; 
                 freeze_state_var:= '0';
 
-            elsif(react = '1' and freeze_state = '0') then
-                --Print game over (all 0s)
-                early_press_indicator_var:='1';
-                rest_indicator_var:= '1';
-                next_rtl_state := rest;
+           -- elsif(rising_edge(react) and freeze_state = '0') then
+             --   --Print game over (all 0s)
+               -- early_press_indicator_var:='1';
+                --rest_indicator_var:= '1';
+                --next_rtl_state := rest;
              
             elsif (freeze_state = '0') then
             
@@ -88,7 +87,6 @@ if (clk'event and (clk='1')) then
                 rtl_state <= rest;
                 LED_on<='0';
         else
-                LED_state<=LED_state_var;
                 rtl_state <= next_rtl_state;
                 cnt<=cnt_var;
                 cnt2<=cnt2_var;

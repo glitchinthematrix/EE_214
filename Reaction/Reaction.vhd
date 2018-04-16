@@ -14,11 +14,11 @@ port(reset,clk,react, start : in std_logic; current_count: out unsigned(10 downt
 end component;
 
 component LED_clock is
-port(reset,clk,react,start,timer_in_rest: in std_logic ; countin: in unsigned (10 downto 0); LED_on, rest_indicator, early_press_indicator,LED_state: out std_logic);
+port(reset,clk,react,start,timer_in_rest: in std_logic ; countin: in unsigned (10 downto 0); LED_on, rest_indicator, early_press_indicator: out std_logic);
 end component;
 
 component total_time_clock is
-port(reset,clk,react, LED_on, start , LED_clock_in_rest, early_press_indicated: in std_logic;score: out unsigned (14 downto 0); rest_indicator: out std_logic);
+port(reset,clk,react, LED_on, start , LED_clock_in_rest, early_press_indicated: in std_logic;score: out unsigned (14 downto 0); rest_indicator,LED_state: out std_logic);
 end component total_time_clock;
 
 component debouncerFSM is
@@ -32,12 +32,12 @@ begin
 
 x_1: debouncerFSM port map (x(0)=> not(react), x(1)=> clk, x(2)=>not(reset), z=>react1);
 
-x_2: free_run_counter port map(reset=>not(reset), clk=>clk, react=>react1, start=>not(start), current_count=> random_num);
+x_2: free_run_counter port map(reset=>not(reset), clk=>clk, react=>not(react), start=>not(start), current_count=> random_num);
 
-x_3: LED_clock port	map (reset=>not(reset), clk=>clk, react=>react1, start=>not(start), timer_in_rest=>ir1, countin=> random_num, LED_on=>LED_indicator, rest_indicator=>ir2, early_press_indicator=>early_press,LED_state=>LED_state_sig);
+x_3: LED_clock port	map (reset=>not(reset), clk=>clk, react=>not(react), start=>not(start), timer_in_rest=>ir1, countin=> random_num, LED_on=>LED_indicator, rest_indicator=>ir2, early_press_indicator=>early_press);
 
 LEDr <= LED_indicator;
 LEDs <=LED_state_sig;
-x_4: total_time_clock port map (reset=>not(reset), react=>react1, LED_on => LED_indicator, start=>not(start) , clk=>clk, LED_clock_in_rest=>ir2, early_press_indicated=> early_press, rest_indicator => ir1 );
+x_4: total_time_clock port map (reset=>not(reset), react=>not(react), LED_on => LED_indicator, start=>not(start) , clk=>clk, LED_clock_in_rest=>ir2, early_press_indicated=> early_press, rest_indicator => ir1, LED_state=>LED_state_sig);
 
 end Behave;
